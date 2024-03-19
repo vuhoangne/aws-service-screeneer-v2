@@ -7,10 +7,10 @@ pre : " <b> 2. </b> "
 ---
 
 
-### Overall
- In this section, we'll prepare all resource for series workshop about RDS PostgreSQL.
+#### Overall
+- In this section, we'll prepare all resources for series workshop about RDS PostgreSQL.
 
-### Content
+#### Content
  1. [Create a VPC](2-1-createvpc/)
  2. [Create EC2 Security Group](2-2-createec2sg/)
  3. [Create RDS Security Group ](2-3-createrdssg/)

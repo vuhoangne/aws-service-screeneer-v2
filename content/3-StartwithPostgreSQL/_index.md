@@ -1,7 +1,7 @@
 ---
 title : "Start with PostgreSQL"
 date :  "`r Sys.Date()`" 
-weight : 2 
+weight : 3 
 chapter : false
 pre : " <b> 3. </b> "
 ---

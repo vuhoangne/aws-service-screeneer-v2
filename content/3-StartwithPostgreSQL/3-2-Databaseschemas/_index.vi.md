@@ -1,263 +1,122 @@
 ---
-title : "Database and Schemas"
+title : "Database và Schemas"
 date :  "`r Sys.Date()`" 
 weight : 2 
 chapter : false
-pre : " <b> 2.2. </b> "
+pre : " <b> 3.2. </b> "
 ---
-Welcome to PostgreSQL! If this is your first time looking at **PostgreSQL**, we encourage you to check out the official [About PostgreSQL](https://www.postgresql.org/about/)  webpage.
+Chào mừng đến với PostgreSQL! Nếu đây là lần đầu tiên bạn tìm hiểu về **PostgreSQL**, chúng tôi khuyến khích bạn xem trang web chính thức [Giới thiệu về PostgreSQL](https://www.postgresql.org/about/).
 
-In this module, we are going to explore **Databases and Schemas.**
+Trong module này, chúng ta sẽ tìm hiểu về **Databases và Schemas.**
 
 {{% notice info %}}
-This chapter assumes you have setup and configured pgAdmin. If you haven't, please complete the pgAdmin module before proceeding.
+Vui lòng hoàn thành việc cài đặt và cấu hình trước khi tiếp tục tìm hiểu về module này.
 {{% /notice %}}
 
-#### Explore Databases
+#### Tìm hiểu về Databases
 
- 1.In your pgAdmin tool, click the *>* in front of **rdspg-fcj-labs** to expand it.
-
- ![rdspg-fcj-labs](/images/2/2-2/1.png)
+ 1. Trong pgAdmin tool, hãy nhấp vào *>* ở phía trước **rdspg-fcj-labs** để mở rộng nó.
+      ![rdspg-fcj-labs](/images/2/2-2/1.png)
  {{% notice note %}}
- You see 3 breakouts: Databases, Login/Group Roles, and Tablespaces.\
- In this section, we will focus on **Databases**. And we'll cover **Login/Group** Roles in a later section.
+ Bạn thấy 3 mục: Databases, Login/Group Roles, and Tablespaces.\
+ Trong phần này, chúng ta sẽ tập trung vào **Databases**. Và chúng ta sẽ đề cập đến **Login/Group** trong phần sau.
  {{% /notice %}}
 
  
- 2.Expand the Databases node.
-
- ![Databases](/images/2/2-2/2.png)
-
- From a terminology standpoint, the PostgreSQL instance `(rdspg-fcj-labs)` you have created is known as a PostgreSQL **cluster**. A cluster contains one or more **databases**. While the users/roles of a cluster are shared across a cluster, no data is shared across databases. In other words, when a customer connects to a cluster, that connection is required to specify the database it wants to work with and that connection can only work within a single database at a time.\
+ 2. Tìm hiểu về Databases node.
+   ![Databases](/images/2/2-2/2.png)
+     Theo thuật ngữ ngành, PostgreSQL instance `(rdspg-fcj-labs)` mà bạn đã tạo được gọi là **cụm** PostgreSQL. Một cụm chứa một hoặc nhiều **cơ sở dữ liệu**. Mặc dù users/roles của một cụm được chia sẻ nhưng không có dữ liệu nào được chia sẻ trên các cơ sở dữ liệu. Nói cách khác, khi khách hàng kết nối với một cụm, kết nối đó bắt buộc phải chỉ định cơ sở dữ liệu mà họ muốn làm việc và kết nối đó chỉ có thể hoạt động trong một cơ sở dữ liệu tại một thời điểm.\
  {{% notice note %}}
- you see a handful of databases within the `pglab` cluster.
+ bạn sẽ thấy một số cơ sở dữ liệu trong cụm `pglab`.
  {{% /notice %}}
+ {{%expand "Cơ sở dữ liệu `rdsadmin` là gì?" %}}Cơ sở dữ liệu có tên rdsadmin là cơ sở dữ liệu được dành riêng để sử dụng bởi RDS/Aurora.{{% /expand%}}
 
+ 3. Nhấp chuột phải vào **Databases** và chọn **Create**, sau đó nhấp vào **Databases**
+   ![Create Databases](/images/2/2-2/3.png)
 
- {{%expand "What is the `rdsadmin` database ?" %}}The database named rdsadmin is a database that is reserved for use by the RDS/Aurora control plane.{{% /expand%}}
-
- 3.Right-click on the **Databases** node and choose **Create**, then click **Databases**
-
- ![Create Databases](/images/2/2-2/3.png)
-
- 4.Name the database `first_database` (but don't save it yet)
-
- ![My Databases](/images/2/2-2/4.png)
-
+ 4. Đặt tên cơ sở dữ liệu là `first_database` (nhưng chưa lưu)
+      ![My Databases](/images/2/2-2/4.png)
  {{% notice note %}}
- The database has an owner. This role can control and assign permissions for this database to other roles. The owner defaults to the role you are currently logged in with pgAdmin. Also note that you can alter the owner of most PostgreSQL objects even after they are originally created.
+ Mọi cơ sở dữ liệu đều có chủ sở hữu, đây là vai trò có toàn quyền kiểm soát cơ sở dữ liệu và có thể gán quyền cho các vai trò khác. Theo mặc định, khi cơ sở dữ liệu được tạo trong PostgreSQL, vai trò được sử dụng để tạo cơ sở dữ liệu sẽ trở thành chủ sở hữu của cơ sở dữ liệu đó. Trong PGAdmin, vai trò bạn đăng nhập thường sẽ được đặt làm chủ sở hữu cơ sở dữ liệu mà bạn hiện đang làm việc. Điều đáng nói là PostgreSQL cho phép bạn thay đổi chủ sở hữu của hầu hết các đối tượng cơ sở dữ liệu ngay cả sau khi chúng đã được tạo
  {{% /notice %}} 
 
- 5.Now click on the **Definition** tab
-
- ![Definition](/images/2/2-2/5.png)
-
- {{% notice note %}}
- There are [various settings](https://www.postgresql.org/docs/11/sql-createdatabase.html)  that can be changed. You don't need to change anything for now.
- {{% /notice %}}
-
- 6.Click on the **SQL** tab
-
- ![SQL](/images/2/2-2/6.png)
- The SQL tab shows you a preview of the generated SQL command that pgAdmin is going to run.
-
- 7.Click **Save** \
- 8.Find your new database in the navigator and expand it.
- ![SQL](/images/2/2-2/7.png)
-
-#### Explore Schemas
-A database contains one or more named **schemas**, which in turn contain tables and other objects like views and functions. The objects in a given PostgreSQL schema can be owned by different users and the schema name has no implied correlation to the name of the schema owner.
-
-As described in the [PostgreSQL Documentation](https://www.postgresql.org/docs/11/ddl-schemas.html)
-
-
-> " The same object name can be used in different schemas without conflict; for example, both `schema1` and `myschema` may contain tables named mytable. Unlike databases, schemas are not rigidly separated: a user may access objects in any of the schemas in the database he is connected to, if he has privileges to do so.
->
-> There are several reasons why one might want to use schemas:
->
-> - To allow many users to use one database without interfering with each other.
-> - To organize database objects into logical groups to make them more manageable.
-> - Third-party applications can be put into separate schemas so they cannot collide with the names of other objects.
->
-> Schemas are analogous to directories at the operating system level, except that schemas cannot be nested."
-
-1.Expand the **Schemas** node and see a default **public schema**.
-
-![Schema](/images/2/2-2/8.png)
-
-
-
-2.Right-click on the **Schemas** node and choose **Create**, then click **Schema**.
-
-![create schema](/images/2/2-2/9.png)
-
-3.Name the schema `first_schema`
-
-![named schema](/images/2/2-2/10.png)
+ 5. Hãy nhấp vào tab **Definition**
+   ![Definition](/images/2/2-2/5.png)
 
 {{% notice note %}}
- The schemas have an owner and also have security permissions and default privileges for new objects created in the schema (you can click on the Security tab and the Default Permissions tab in the Create Schema dialog if you want).
+ Có [nhiều cài đặt khác nhau](https://www.postgresql.org/docs/11/sql-createdatabase.html) có thể thay đổi được. Bạn không cần phải thay đổi bất cứ điều gì bây giờ.
  {{% /notice %}}
+ 6. Nhấp vào tab **SQL**
+   ![SQL](/images/2/2-2/6.png)
+
+ Tab SQL hiển thị cho bạn bản xem trước của lệnh SQL được tạo mà pgAdmin sẽ chạy.
+
+ 7. Click **Save** 
+ 8. Tìm cơ sở dữ liệu mới của bạn trong trình điều hướng và mở rộng nó.
+    ![SQL](/images/2/2-2/7.png)
+
+#### Tìm hiểu về Schemas
+Cơ sở dữ liệu chứa một hoặc nhiều **Schemas** được đặt tên, lần lượt chứa các bảng và các đối tượng khác như dạng views và functions. Trong PostgreSQL, các đối tượng trong một Schemas có thể có các chủ sở hữu khác nhau và quyền sở hữu Schemas đó không phụ thuộc vào tên lược đồ.
+
+Như được mô tả trong [ tài liệu về PostgreSQL ](https://www.postgresql.org/docs/11/ddl-schemas.html)
 
 
-4.Click **Save** to create the new schema.
-
-{{% notice info %}}
-PostgreSQL **schemas** can be different from how other databases like Oracle implement schemas. In Oracle, schemas are directly mapped 1:1 to users. In PostgreSQL, schemas are not coupled directly to a specific user(role).
-{{% /notice %}}
-
-As discussed in the [documentation](https://www.postgresql.org/docs/11/ddl-schemas.html#DDL-SCHEMAS-PORTABILITY) ,
-
-
-> "In the SQL standard, the notion of objects in the same schema being owned by different users does not exist. Moreover, some implementations do not allow you to create schemas that have a different name than their owner. In fact, the concepts of schema and user are nearly equivalent in a database system that implements only the basic schema support specified in the standard. Therefore, many users consider qualified names to really consist of username.tablename. This is how PostgreSQL will effectively behave if you create a per-user schema for every user. Also, there is no concept of a public schema in the SQL standard. For maximum conformance to the standard, you should not use (perhaps even remove) the public schema."
-
-**A note about the** `search_path`
-Referencing objects via Qualified names, such as `first_schema.first_table`, is tedious to write, and hard-coding a particular schema name into an application is not ideal. The solution is to use unqualified names, such as `first_table` and this is made possible via the PostgreSQL `search_path`.
-
-As discussed in the [documentation](https://www.postgresql.org/docs/11/ddl-schemas.html#DDL-SCHEMAS-PATH) ,
-
-> "The system determines which table is meant by following a search_path, which is a list of schemas to look in. The first matching table in the search path is taken to be the one wanted. If there is no match in the search path, an error is reported, even if matching table names exist in other schemas in the database.
+> "Tên đối tượng giống nhau có thể được sử dụng trong các Schemas khác nhau mà không có xung đột; ví dụ: cả `schema1` và `myschema` đều có thể chứa các bảng có tên mytable. Không giống như Databases, các Schemas không được phân tách một cách cứng nhắc: người dùng có thể truy cập các đối tượng trong bất kỳ Schemas nào trong cơ sở dữ liệu mà anh ta kết nối tới, nếu anh ta có đặc quyền làm như vậy.
 >
-> The first schema named in the search path is called the current schema. Aside from being the first schema searched, it is also the schema in which new tables will be created if the CREATE TABLE command does not specify a schema name."
-
-By default, the search_path is set to $user,public. As the documentation states
-> "The first element specifies that a schema with the same name as the current user is to be searched. If no such schema exists, the entry is ignored. The second element refers to the public schema that we have seen already."
-
-{{% notice info %}}
-It should be noted that PostgreSQL does not have the concept of synonyms like certain other databases. You can use the search_path to handle some, but not all, of the capabilities that synonyms offer. For an example of implementing other synonym-like functionality in PostgreSQL, see this [blog post](https://www.dbbest.com/blog/convert-oracle-synonyms-to-postgresql/) .
-{{% /notice %}}
-
-**Congratulations!**
-
-You have learned the basics about PostgreSQL Databases and Schemas.---
-title : "Database and Schemas"
-date :  "`r Sys.Date()`" 
-weight : 2 
-chapter : false
-pre : " <b> 2.2. </b> "
----
-Welcome to PostgreSQL! If this is your first time looking at **PostgreSQL**, we encourage you to check out the official [About PostgreSQL](https://www.postgresql.org/about/)  webpage.
-
-In this module, we are going to explore **Databases and Schemas.**
-
-{{% notice info %}}
-This chapter assumes you have setup and configured pgAdmin. If you haven't, please complete the pgAdmin module before proceeding.
-{{% /notice %}}
-
-#### Explore Databases
-
- 1.In your pgAdmin tool, click the *>* in front of **rdspg-fcj-labs** to expand it.
-
- ![rdspg-fcj-labs](/images/2/2-2/1.png)
- {{% notice note %}}
- You see 3 breakouts: Databases, Login/Group Roles, and Tablespaces.\
- In this section, we will focus on **Databases**. And we'll cover **Login/Group** Roles in a later section.
- {{% /notice %}}
-
- 
- 2.Expand the Databases node.
-
- ![Databases](/images/2/2-2/2.png)
-
- From a terminology standpoint, the PostgreSQL instance `(rdspg-fcj-labs)` you have created is known as a PostgreSQL **cluster**. A cluster contains one or more **databases**. While the users/roles of a cluster are shared across a cluster, no data is shared across databases. In other words, when a customer connects to a cluster, that connection is required to specify the database it wants to work with and that connection can only work within a single database at a time.\
- {{% notice note %}}
- you see a handful of databases within the `pglab` cluster.
- {{% /notice %}}
-
-
- {{%expand "What is the `rdsadmin` database ?" %}}The database named rdsadmin is a database that is reserved for use by the RDS/Aurora control plane.{{% /expand%}}
-
- 3.Right-click on the **Databases** node and choose **Create**, then click **Databases**
-
- ![Create Databases](/images/2/2-2/3.png)
-
- 4.Name the database `first_database` (but don't save it yet)
-
- ![My Databases](/images/2/2-2/4.png)
-
- {{% notice note %}}
- The database has an owner. This role can control and assign permissions for this database to other roles. The owner defaults to the role you are currently logged in with pgAdmin. Also note that you can alter the owner of most PostgreSQL objects even after they are originally created.
- {{% /notice %}} 
-
- 5.Now click on the **Definition** tab
-
- ![Definition](/images/2/2-2/5.png)
-
- {{% notice note %}}
- There are [various settings](https://www.postgresql.org/docs/11/sql-createdatabase.html)  that can be changed. You don't need to change anything for now.
- {{% /notice %}}
-
- 6.Click on the **SQL** tab
-
- ![SQL](/images/2/2-2/6.png)
- The SQL tab shows you a preview of the generated SQL command that pgAdmin is going to run.
-
- 7.Click **Save** \
- 8.Find your new database in the navigator and expand it.
- ![SQL](/images/2/2-2/7.png)
-
-#### Explore Schemas
-A database contains one or more named **schemas**, which in turn contain tables and other objects like views and functions. The objects in a given PostgreSQL schema can be owned by different users and the schema name has no implied correlation to the name of the schema owner.
-
-As described in the [PostgreSQL Documentation](https://www.postgresql.org/docs/11/ddl-schemas.html)
-
-
-> " The same object name can be used in different schemas without conflict; for example, both `schema1` and `myschema` may contain tables named mytable. Unlike databases, schemas are not rigidly separated: a user may access objects in any of the schemas in the database he is connected to, if he has privileges to do so.
+> Có một số lý do tại sao người ta  muốn sử dụng schemas:
 >
-> There are several reasons why one might want to use schemas:
+> - Cho phép nhiều người sử dụng cùng sử dụng một cơ sở dữ liệu mà không can thiệp lẫn nhau.
+> - Để tổ chức các đối tượng cơ sở dữ liệu thành các nhóm logic để dễ quản lý hơn.
+> - Các ứng dụng của bên thứ ba có thể được đưa vào các Schemas riêng biệt để chúng không thể xung đột với tên của các đối tượng khác.
 >
-> - To allow many users to use one database without interfering with each other.
-> - To organize database objects into logical groups to make them more manageable.
-> - Third-party applications can be put into separate schemas so they cannot collide with the names of other objects.
->
-> Schemas are analogous to directories at the operating system level, except that schemas cannot be nested."
+> Các Schemas tương tự như các thư mục ở cấp độ hệ điều hành, ngoại trừ các Schemas đó không thể lồng vào nhau."
 
-1.Expand the **Schemas** node and see a default **public schema**.
+1. Click vào **Schemas** và xem các **public schema** mặc định.
 
-![Schema](/images/2/2-2/8.png)
+   ![Schema](/images/2/2-2/8.png)
 
 
 
-2.Right-click on the **Schemas** node and choose **Create**, then click **Schema**.
+2. Nhấp chuột phải vào **Schemas** và chọn **Create**, sau đó nhấp vào **Schema**.
 
-![create schema](/images/2/2-2/9.png)
+   ![create schema](/images/2/2-2/9.png)
 
-3.Name the schema `first_schema`
+3. Đặt tên cho schema là `first_schema`
 
-![named schema](/images/2/2-2/10.png)
+   ![named schema](/images/2/2-2/10.png)
 
 {{% notice note %}}
- The schemas have an owner and also have security permissions and default privileges for new objects created in the schema (you can click on the Security tab and the Default Permissions tab in the Create Schema dialog if you want).
+ Các schemas có chủ sở hữu và có các quyền bảo mật cũng như các đặc quyền mặc định cho các đối tượng mới được tạo trong schema (bạn có thể nhấp vào Security tab và the Default Permissions  trong hộp thoại Tạo schema nếu muốn).
  {{% /notice %}}
 
 
-4.Click **Save** to create the new schema.
+4. Nhấp vào **Save** để tạo schema.
 
 {{% notice info %}}
-PostgreSQL **schemas** can be different from how other databases like Oracle implement schemas. In Oracle, schemas are directly mapped 1:1 to users. In PostgreSQL, schemas are not coupled directly to a specific user(role).
+**lược đồ** của PostgreSQL có thể khác với cách các cơ sở dữ liệu khác như Oracle triển khai các lược đồ. Trong Oracle, các lược đồ được ánh xạ trực tiếp 1:1 tới người dùng. Trong PostgreSQL, các lược đồ không được kết hợp trực tiếp với một người dùng (vai trò) cụ thể.
 {{% /notice %}}
 
-As discussed in the [documentation](https://www.postgresql.org/docs/11/ddl-schemas.html#DDL-SCHEMAS-PORTABILITY) ,
+Như đã thảo luận trong [tài liệu](https://www.postgresql.org/docs/11/ddl-schemas.html#DDL-SCHEMAS-PORTABILITY) ,
 
 
-> "In the SQL standard, the notion of objects in the same schema being owned by different users does not exist. Moreover, some implementations do not allow you to create schemas that have a different name than their owner. In fact, the concepts of schema and user are nearly equivalent in a database system that implements only the basic schema support specified in the standard. Therefore, many users consider qualified names to really consist of username.tablename. This is how PostgreSQL will effectively behave if you create a per-user schema for every user. Also, there is no concept of a public schema in the SQL standard. For maximum conformance to the standard, you should not use (perhaps even remove) the public schema."
+> "Trong tiêu chuẩn SQL, khái niệm các đối tượng trong cùng một schema được sở hữu bởi những người dùng khác nhau không tồn tại. Hơn nữa, một số cách triển khai không cho phép bạn tạo các schema có tên khác với tên chủ sở hữu của chúng. Trên thực tế, các khái niệm về schema và người dùng gần như tương đương trong một hệ thống cơ sở dữ liệu chỉ triển khai hỗ trợ schema cơ bản được quy định trong tiêu chuẩn. Do đó, nhiều người dùng coi những tên đủ điều kiện thực sự bao gồm tên người dùng.tablename. Đây là cách PostgreSQL hoạt động hiệu quả nếu bạn tạo schema cho mọi người dùng. Ngoài ra, không có khái niệm về public schema trong tiêu chuẩn SQL. Để tuân thủ tối đa tiêu chuẩn, bạn không nên sử dụng (thậm chí có thể xóa) public schema."
 
-**A note about the** `search_path`
-Referencing objects via Qualified names, such as `first_schema.first_table`, is tedious to write, and hard-coding a particular schema name into an application is not ideal. The solution is to use unqualified names, such as `first_table` and this is made possible via the PostgreSQL `search_path`.
+**Lưu ý về** `search_path`
+Việc tham chiếu các đối tượng thông qua các tên Đủ điều kiện, chẳng hạn như `first_schema.first_table`, rất tẻ nhạt khi viết và việc mã hóa cứng một tên lược đồ cụ thể vào một ứng dụng là không lý tưởng. Giải pháp là sử dụng các tên không đủ tiêu chuẩn, chẳng hạn như `first_table` và điều này có thể thực hiện được thông qua `search_path` của PostgreSQL.
 
-As discussed in the [documentation](https://www.postgresql.org/docs/11/ddl-schemas.html#DDL-SCHEMAS-PATH) ,
+Như đã thảo luận trong [tài liệu](https://www.postgresql.org/docs/11/ddl-schemas.html#DDL-SCHEMAS-PATH) ,
 
-> "The system determines which table is meant by following a search_path, which is a list of schemas to look in. The first matching table in the search path is taken to be the one wanted. If there is no match in the search path, an error is reported, even if matching table names exist in other schemas in the database.
+> "Hệ thống xác định bảng nào có nghĩa bằng cách đi theo **search_path**, đây là danh sách các schema cần tìm. Bảng khớp đầu tiên trong đường dẫn tìm kiếm được coi là bảng mong muốn. Nếu không có bảng khớp nào trong đường dẫn tìm kiếm, một lỗi được báo cáo, ngay cả khi tên bảng trùng khớp tồn tại trong các lược đồ khác trong cơ sở dữ liệu.
 >
-> The first schema named in the search path is called the current schema. Aside from being the first schema searched, it is also the schema in which new tables will be created if the CREATE TABLE command does not specify a schema name."
+> Schema đầu tiên có tên trong đường dẫn tìm kiếm được gọi là schema hiện tại. Ngoài việc là lược đồ đầu tiên được tìm kiếm, nó còn là schema trong đó các bảng mới sẽ được tạo nếu lệnh `CREATE TABLE` không chỉ định tên schema."
 
-By default, the search_path is set to $user,public. As the documentation states
-> "The first element specifies that a schema with the same name as the current user is to be searched. If no such schema exists, the entry is ignored. The second element refers to the public schema that we have seen already."
+Theo mặc định, `search_path` được đặt thành `$user,public`. Như tài liệu nêu
+> "Phần tử đầu tiên chỉ định rằng một schema có cùng tên với người dùng hiện tại sẽ được tìm kiếm. Nếu không có schema như vậy tồn tại, mục nhập sẽ bị bỏ qua. Phần tử thứ hai đề cập đến lược đồ công khai mà chúng ta đã thấy."
 
 {{% notice info %}}
-It should be noted that PostgreSQL does not have the concept of synonyms like certain other databases. You can use the search_path to handle some, but not all, of the capabilities that synonyms offer. For an example of implementing other synonym-like functionality in PostgreSQL, see this [blog post](https://www.dbbest.com/blog/convert-oracle-synonyms-to-postgresql/) .
+Cần lưu ý rằng PostgreSQL không có khái niệm từ đồng nghĩa như một số cơ sở dữ liệu khác. Bạn có thể sử dụng `search_path` để xử lý một số, nhưng không phải tất cả, khả năng mà từ đồng nghĩa cung cấp. Để biết ví dụ về cách triển khai chức năng giống từ đồng nghĩa khác trong PostgreSQL, hãy xem [blog](https://www.dbbest.com/blog/convert-oracle-synonyms-to-postgresql/) này.
 {{% /notice %}}
 
-**Congratulations!**
+**Chúc mừng!**
 
-You have learned the basics about PostgreSQL Databases and Schemas.
+Bạn đã tìm hiểu những kiến thức cơ bản về Databases và Schema trong PostgreSQL.

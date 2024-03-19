@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tables and Datatypes :: AWS RDS PostgreSQL</title>
 
     
-    <link href="/css/nucleus.css?1696781237" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696781237" rel="stylesheet">
-    <link href="/css/hybrid.css?1696781237" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696781237" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696781237" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696781237" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696781237" rel="stylesheet">
-    <link href="/css/theme.css?1696781237" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696781237" rel="stylesheet">
+    <link href="/css/nucleus.css?1710861295" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710861295" rel="stylesheet">
+    <link href="/css/hybrid.css?1710861295" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710861295" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710861295" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710861295" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710861295" rel="stylesheet">
+    <link href="/css/theme.css?1710861295" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710861295" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1696781237" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710861295" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696781237"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710861295"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696781237"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696781237"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710861295"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710861295"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696781237"></script>
+<script type="text/javascript" src="/js/search.js?1710861295"></script>
 
     
   </div>
@@ -307,13 +307,13 @@
  
   
     
-    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create RDS PostgreSQL DB" class="dd-item 
+    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create an RDS PostgreSQL DB" class="dd-item 
         
         
         
         ">
       <a href="/2-preparation/2-7-createrdsdb/">
-           <b> 2.7. </b> Create RDS PostgreSQL DB
+           <b> 2.7. </b> Create an RDS PostgreSQL DB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4" class="dd-item 
+    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4 tool" class="dd-item 
         
         
         
         ">
       <a href="/3-startwithpostgresql/3-1-pgadmin/">
-           <b> 3.1. </b> pgAdmin4
+           <b> 3.1. </b> pgAdmin4 tool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -941,16 +941,22 @@ From the <strong>PostgreSQL documentation</strong> ,</p>
 <p>Tables are grouped into databases, and a collection of databases managed by a single PostgreSQL server instance constitutes a database cluster.&rdquo;</p>
 </blockquote>
 <h4 id="explore-tables">Explore Tables</h4>
-<p>1.In your pgAdmin tool, expand your <strong>first_schema</strong> inside your <strong>first_database</strong>.</p>
-<p><img src="/images/2/2-3/11.png" alt="table"></p>
+<ol>
+<li>
+<p>In your pgAdmin tool, expand your <strong>first_schema</strong> inside your <strong>first_database</strong>.
+<img alt="table" src="/images/2/2-3/11.png">
 
 <div class="notices note" ><p>The different kinds of objects (tables, views, functions, etc) that can be part of a PostgreSQL schema.</p>
 </div>
-
-<p>2.Right-click on <strong>Tables</strong> and choose <strong>Create</strong> then select <strong>Table</strong></p>
-<p><img src="/images/2/2-3/12.png" alt="create table"></p>
-<p>3.Name your table <strong><code>first_table</code></strong>.</p>
-<p><img src="/images/2/2-3/13.png" alt="named table"></p>
+</p>
+</li>
+<li>
+<p>Right-click on <strong>Tables</strong> and choose <strong>Create</strong> then select <strong>Table</strong>
+<img alt="create table" src="/images/2/2-3/12.png"></p>
+</li>
+<li>
+<p>Name your table <strong><code>first_table</code></strong>.
+<img alt="named table" src="/images/2/2-3/13.png">
 
 <div class="notices note" ><p>There is an option to make your table partitioned. For this <strong>first_table</strong>, we will not use table partitioning.</p>
 </div>
@@ -958,10 +964,12 @@ From the <strong>PostgreSQL documentation</strong> ,</p>
 
 <div class="notices info" ><p>Table Partitioning in PostgreSQL is an interesting subject. It is interesting because table partitioning has evolved across the PostgreSQL versions. In earlier versions (version 9 and earlier), table partitioning was indirectly supported via the PostgreSQL table inheritance feature (see below). Starting with PostgreSQL version 10, table partition became a native declarative feature. A key thing to remember is that the exact set of table partitioning features supported are tied to the PostgreSQL version. So, be sure you refer to the <a href="https://www.postgresql.org/docs/11/ddl-partitioning.html">table partitioning documentation</a>  tied to the version of PostgreSQL you are using.</p>
 </div>
+</p>
+</li>
+<li>
+<p>Click on Columns to advance to the Columns tab. Then click on the <strong>+</strong> sign. Then enter <code>col1</code> for the Name. Fill out <code>text</code> for the Data type. Click Yes for Not NULL. Click Yes for Primary Key.
+<img alt="ẹnded table" src="/images/2/2-3/14.png">
 
-<p>4.Click on Columns to advance to the Columns tab. Then click on the <strong>+</strong> sign. Then enter <code>col1</code> for the Name. Fill out <code>text</code> for the Data type. Click Yes for Not NULL. Click Yes for Primary Key.</p>
-<p><img src="/images/2/2-3/14.png" alt="ẹnded table"></p>
-<p>
 <div class="notices note" ><p>There is an option to inherit columns from other tables. We will not use table inheritance for this first_table, but it is an interesting and useful PostgreSQL capability to be aware of.</p>
 </div>
 
@@ -969,8 +977,12 @@ From the <strong>PostgreSQL documentation</strong> ,</p>
 <div class="notices info" ><p>Table Inheritance in PostgreSQL can be a useful tool for database designers. Table inheritance lets a child table inherit all of the columns of its parent table(s). Further, you can write queries against parent tables that reference the rows of the parent table and all of its descendent tables, too. See the example in the <a href="https://www.postgresql.org/docs/11/ddl-inherit.html">table inheritance documentation</a>  to better understand the capabilities.</p>
 </div>
 </p>
-<p>5.Browse the available options on the other tabs and end up on the SQL tab. Then click Save.</p>
-<p><img src="/images/2/2-3/15.png" alt="saved table"></p>
+</li>
+<li>
+<p>Browse the available options on the other tabs and end up on the SQL tab. Then click Save.
+<img alt="saved table" src="/images/2/2-3/15.png"></p>
+</li>
+</ol>
 <h4 id="explore-data-types">Explore Data types</h4>
 <p>As discussed in the <a href="https://www.postgresql.org/docs/11/ddl-basics.html">documentation</a> ,</p>
 <p>&ldquo;PostgreSQL includes a sizable set of built-in data types that fit many applications. Users can also define their own data types. Most built-in data types have obvious names and semantics, so we defer a detailed explanation to Chapter 8. Some of the frequently used data types are <code>integer</code> for whole numbers, <code>numeric</code> for possibly fractional numbers, <code>text</code> for character strings, <code>date</code> for dates, <code>time</code> for time-of-day values, and <code>timestamp</code> for values containing both date and time.&rdquo;</p>
@@ -1492,19 +1504,19 @@ From the <strong>PostgreSQL documentation</strong> ,</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696781237"></script>
-    <script src="/js/jquery.sticky.js?1696781237"></script>
-    <script src="/js/featherlight.min.js?1696781237"></script>
-    <script src="/js/highlight.pack.js?1696781237"></script>
+    <script src="/js/clipboard.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710861295"></script>
+    <script src="/js/jquery.sticky.js?1710861295"></script>
+    <script src="/js/featherlight.min.js?1710861295"></script>
+    <script src="/js/highlight.pack.js?1710861295"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696781237"></script>
-    <script src="/js/learn.js?1696781237"></script>
-    <script src="/js/hugo-learn.js?1696781237"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710861295"></script>
+    <script src="/js/learn.js?1710861295"></script>
+    <script src="/js/hugo-learn.js?1710861295"></script>
 
-    <link href="/mermaid/mermaid.css?1696781237" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696781237"></script>
+    <link href="/mermaid/mermaid.css?1710861295" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710861295"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Catalog and Data dictionary :: AWS RDS PostgreSQL</title>
 
     
-    <link href="/css/nucleus.css?1696781237" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696781237" rel="stylesheet">
-    <link href="/css/hybrid.css?1696781237" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696781237" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696781237" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696781237" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696781237" rel="stylesheet">
-    <link href="/css/theme.css?1696781237" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696781237" rel="stylesheet">
+    <link href="/css/nucleus.css?1710861295" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710861295" rel="stylesheet">
+    <link href="/css/hybrid.css?1710861295" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710861295" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710861295" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710861295" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710861295" rel="stylesheet">
+    <link href="/css/theme.css?1710861295" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710861295" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1696781237" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710861295" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696781237"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710861295"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696781237"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696781237"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710861295"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710861295"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696781237"></script>
+<script type="text/javascript" src="/js/search.js?1710861295"></script>
 
     
   </div>
@@ -307,13 +307,13 @@
  
   
     
-    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create RDS PostgreSQL DB" class="dd-item 
+    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create an RDS PostgreSQL DB" class="dd-item 
         
         
         
         ">
       <a href="/2-preparation/2-7-createrdsdb/">
-           <b> 2.7. </b> Create RDS PostgreSQL DB
+           <b> 2.7. </b> Create an RDS PostgreSQL DB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4" class="dd-item 
+    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4 tool" class="dd-item 
         
         
         
         ">
       <a href="/3-startwithpostgresql/3-1-pgadmin/">
-           <b> 3.1. </b> pgAdmin4
+           <b> 3.1. </b> pgAdmin4 tool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -936,29 +936,44 @@ This chapter introduces the PostgreSQL <a href="https://www.postgresql.org/docs/
 <h4 id="the-pg_catalog-schema">The pg_catalog schema</h4>
 <p>In addition to public and user-created schemas, each database contains a pg_catalog schema, which contains the system tables and all the built-in data types, functions, and operators.</p>
 <p>These are a set of tables used to store dynamic and static metadata for the PostgreSQL database and can be thought of as the “data dictionary” for the database. These tables are used for internal “bookkeeping”-type activities. All System catalog tables start with the pg_*prefix and can be found in the <a href="https://www.postgresql.org/docs/11/catalogs-overview.html">pg_catalog schema</a></p>
-<p>1.In pgAdmin, expand the <strong>rdspg-fcj-labs</strong> node, then expand the <strong>Databases</strong> node, then expand the <strong>first_database</strong> node, then expand the <strong>Catalogs</strong> node, then expand the <strong>PostgreSQL Catalog</strong>, then expand <strong>Tables</strong>.</p>
-<p><img src="/images/2/2-6/43.png" alt="catalog"></p>
+<ol>
+<li>In pgAdmin, expand the <strong>rdspg-fcj-labs</strong> node, then expand the <strong>Databases</strong> node, then expand the <strong>first_database</strong> node, then expand the <strong>Catalogs</strong> node, then expand the <strong>PostgreSQL Catalog</strong>, then expand <strong>Tables</strong>.
+<img alt="catalog" src="/images/2/2-6/43.png"></li>
+</ol>
 <p>You can see the tables in the <a href="https://www.postgresql.org/docs/11/catalogs-overview.html">pg_catalog schema</a>.</p>
-<p>2.Click on the <strong>first_database</strong>, then choose <strong>Query Tool</strong> icon</p>
-<p>3.Paste and run this command to see an example of querying the <strong>pg_catalog</strong> directly:</p>
-<p><code>select * from pg_tables where schemaname='pg_catalog';</code>
-<img src="/images/2/2-6/44.png" alt="catalog"></p>
+<ol start="2">
+<li>
+<p>Click on the <strong>first_database</strong>, then choose <strong>Query Tool</strong> icon</p>
+</li>
+<li>
+<p>Paste and run this command to see an example of querying the <strong>pg_catalog</strong> directly:<br>
+<code>select * from pg_tables where schemaname='pg_catalog';</code>
+<img alt="catalog" src="/images/2/2-6/44.png"></p>
+</li>
+</ol>
 <h4 id="the-statistics-collector-views-also-part-of-pg_catalog">The Statistics Collector Views (also part of pg_catalog)</h4>
 <p>The Statistics Collector is a special subsystem which collects runtime dynamic information about the current activities in the database instance. For example, <a href="https://www.postgresql.org/docs/11/monitoring-stats.html#MONITORING-STATS-DYNAMIC-VIEWS-TABLE">statistics collector views</a>  are useful to determine how frequently a particular table is accessed and if the table is scanned or accessed using an index.</p>
-<p>1.Paste and run this command to see an example of one of the <strong>Statistics Collector</strong> views:</p>
-<p><code>SELECT * FROM pg_stat_activity WHERE STATE = 'active';</code></p>
-<p><img src="/images/2/2-6/45.png" alt="catalog"></p>
-<p>2.lick on the <strong>rds-pg-labs</strong> node. Then click on <strong>Dashboard</strong>. Then click on <strong>Sessions</strong> in the Server activity section.
-<img src="/images/2/2-6/46.png" alt="catalog"></p>
-<p>Here, pgAdmin is showing you the same <strong>pg_stat_activity</strong> information for your PostgreSQL cluster.</p>
-<p>Tip: Performance Insights  is a great way to visualize current and historical activity and wait events. We encourage you to start with Performance Insights for performance-related diagnostics.</p>
+<ol>
+<li>
+<p>Paste and run this command to see an example of one of the <strong>Statistics Collector</strong> views:</p>
+<p><code>SELECT * FROM pg_stat_activity WHERE STATE = 'active';</code>
+<img alt="catalog" src="/images/2/2-6/45.png"></p>
+</li>
+<li>
+<p>Click on the <strong>rds-pg-labs</strong> node. Then click on <strong>Dashboard</strong>. Then click on <strong>Sessions</strong> in the Server activity section.
+<img alt="catalog" src="/images/2/2-6/46.png"></p>
+<p>Here, pgAdmin is showing you the same <strong>pg_stat_activity</strong> information for your PostgreSQL cluster.
 
 <div class="notices tip" ><p><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Performance Insights</a>  is a great way to visualize current and historical activity and wait events. We encourage you to start with Performance Insights for performance-related diagnostics.</p>
 </div>
-
-<p>3.Paste and run this command to see an example of one of the <strong>Statistics Collector</strong> views:
+</p>
+</li>
+<li>
+<p>Paste and run this command to see an example of one of the <strong>Statistics Collector</strong> views:
 <code>select * from information_schema.tables;</code></p>
-<p><img src="/images/2/2-6/48.png" alt="catalog"></p>
+<p><img alt="catalog" src="/images/2/2-6/48.png"></p>
+</li>
+</ol>
 
 
 
@@ -1401,19 +1416,19 @@ This chapter introduces the PostgreSQL <a href="https://www.postgresql.org/docs/
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696781237"></script>
-    <script src="/js/jquery.sticky.js?1696781237"></script>
-    <script src="/js/featherlight.min.js?1696781237"></script>
-    <script src="/js/highlight.pack.js?1696781237"></script>
+    <script src="/js/clipboard.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710861295"></script>
+    <script src="/js/jquery.sticky.js?1710861295"></script>
+    <script src="/js/featherlight.min.js?1710861295"></script>
+    <script src="/js/highlight.pack.js?1710861295"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696781237"></script>
-    <script src="/js/learn.js?1696781237"></script>
-    <script src="/js/hugo-learn.js?1696781237"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710861295"></script>
+    <script src="/js/learn.js?1710861295"></script>
+    <script src="/js/hugo-learn.js?1710861295"></script>
 
-    <link href="/mermaid/mermaid.css?1696781237" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696781237"></script>
+    <link href="/mermaid/mermaid.css?1710861295" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710861295"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

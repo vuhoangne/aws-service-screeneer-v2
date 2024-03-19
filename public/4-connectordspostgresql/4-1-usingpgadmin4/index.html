@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Using pgAdmin4 to connect to RDS PostgreSQL :: AWS RDS PostgreSQL</title>
 
     
-    <link href="/css/nucleus.css?1696781237" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696781237" rel="stylesheet">
-    <link href="/css/hybrid.css?1696781237" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696781237" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696781237" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696781237" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696781237" rel="stylesheet">
-    <link href="/css/theme.css?1696781237" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696781237" rel="stylesheet">
+    <link href="/css/nucleus.css?1710861295" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710861295" rel="stylesheet">
+    <link href="/css/hybrid.css?1710861295" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710861295" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710861295" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710861295" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710861295" rel="stylesheet">
+    <link href="/css/theme.css?1710861295" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710861295" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1696781237" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710861295" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696781237"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710861295"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696781237"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696781237"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710861295"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710861295"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696781237"></script>
+<script type="text/javascript" src="/js/search.js?1710861295"></script>
 
     
   </div>
@@ -307,13 +307,13 @@
  
   
     
-    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create RDS PostgreSQL DB" class="dd-item 
+    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create an RDS PostgreSQL DB" class="dd-item 
         
         
         
         ">
       <a href="/2-preparation/2-7-createrdsdb/">
-           <b> 2.7. </b> Create RDS PostgreSQL DB
+           <b> 2.7. </b> Create an RDS PostgreSQL DB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4" class="dd-item 
+    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4 tool" class="dd-item 
         
         
         
         ">
       <a href="/3-startwithpostgresql/3-1-pgadmin/">
-           <b> 3.1. </b> pgAdmin4
+           <b> 3.1. </b> pgAdmin4 tool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -925,36 +925,48 @@
 You can use the open-source tool <strong>pgAdmin4</strong> to connect to your RDS for PostgreSQL DB instance. You can download and install pgAdmin from <a href="http://www.pgadmin.org/">http://www.pgadmin.org/</a> without having a local instance of PostgreSQL on your client computer</p>
 </div>
 
-<p>1.Launch the <strong>pgAdmin4</strong> application on your client computer.<br>
-2.On the <strong>Dashboard</strong> tab, choose <strong>Add New Server.</strong></p>
-<p><img src="/images/4/4-1/14.png" alt="connecting">
-3.In the <strong>Create - Server</strong> dialog box, type a name on the <strong>General</strong> tab to identify the server in pgAdmin4.</p>
-<p><img src="/images/4/4-1/1.png" alt="connecting"></p>
-<p>4.In the <strong>Connection</strong> tab, type the following information from your DB instance:</p>
+<ol>
+<li>
+<p>Launch the <strong>pgAdmin4</strong> application on your client computer.\</p>
+</li>
+<li>
+<p>On the <strong>Dashboard</strong> tab, choose <strong>Add New Server.</strong> <br>
+<img alt="connecting" src="/images/4/4-1/14.png"></p>
+</li>
+<li>
+<p>In the <strong>Create - Server</strong> dialog box, type a name on the <strong>General</strong> tab to identify the server in pgAdmin4.
+<img alt="connecting" src="/images/4/4-1/1.png"></p>
+</li>
+<li>
+<p>In the <strong>Connection</strong> tab, type the following information from your DB instance:</p>
 <ul>
 <li>For <strong>Host</strong>, The Endpoint of the RDS PostgreSQL DB, for example mypostgresql.c6c8dntfzzhgv0.us-east-2.rds.amazonaws.com.</li>
 <li>For <strong>Port</strong>, type the assigned port.</li>
 <li>For <strong>Username</strong>, type the user name that you entered when you created the DB instance.</li>
-<li>For <strong>Password</strong>, type the password that you entered when you created the DB instance.</li>
+<li>For <strong>Password</strong>, type the password that you entered when you created the DB instance.
+<img alt="connecting" src="/images/4/4-1/2.png"></li>
 </ul>
-<p><img src="/images/4/4-1/2.png" alt="connecting"></p>
-<ol start="5">
-<li>In the <strong>SSH Tunnel</strong> tab, enable the SSH tunnel feature and enter the following information</li>
-</ol>
+</li>
+<li>
+<p>In the <strong>SSH Tunnel</strong> tab, enable the SSH tunnel feature and enter the following information</p>
 <ul>
 <li>For <strong>Host</strong>: The hostname or IP address of the bastion host.</li>
 <li>For <strong>Port</strong>: The SSH port number.</li>
 <li>For <strong>Username</strong>: The username that you use to SSH into the bastion host.</li>
-<li>For <strong>Identity file</strong>: choose the keypair that you have selected when create ec2 bastion host.</li>
+<li>For <strong>Identity file</strong>: choose the keypair that you have selected when create ec2 bastion host.
+<img alt="connecting" src="/images/4/4-1/3.png"></li>
 </ul>
-<p><img src="/images/4/4-1/3.png" alt="connecting"></p>
-<p>5.Choose <strong>Save</strong>.
+</li>
+<li>
+<p>Choose <strong>Save</strong>.
 The server has been added to the pgAdmin4 and its dashboard is visible on the screen:
-<img src="/images/4/4-1/6.png" alt="connecting"></p>
+<img alt="connecting" src="/images/4/4-1/6.png">
 
 <div class="notices tip" ><p>If you have any problems connecting, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToPostgreSQLInstance.html#USER_ConnectToPostgreSQLInstance.Troubleshooting">Troubleshooting connections to your RDS for PostgreSQL instance</a>.</p>
 </div>
-
+</p>
+</li>
+</ol>
 
 
 
@@ -1394,19 +1406,19 @@ The server has been added to the pgAdmin4 and its dashboard is visible on the sc
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696781237"></script>
-    <script src="/js/jquery.sticky.js?1696781237"></script>
-    <script src="/js/featherlight.min.js?1696781237"></script>
-    <script src="/js/highlight.pack.js?1696781237"></script>
+    <script src="/js/clipboard.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710861295"></script>
+    <script src="/js/jquery.sticky.js?1710861295"></script>
+    <script src="/js/featherlight.min.js?1710861295"></script>
+    <script src="/js/highlight.pack.js?1710861295"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696781237"></script>
-    <script src="/js/learn.js?1696781237"></script>
-    <script src="/js/hugo-learn.js?1696781237"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710861295"></script>
+    <script src="/js/learn.js?1710861295"></script>
+    <script src="/js/hugo-learn.js?1710861295"></script>
 
-    <link href="/mermaid/mermaid.css?1696781237" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696781237"></script>
+    <link href="/mermaid/mermaid.css?1710861295" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710861295"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

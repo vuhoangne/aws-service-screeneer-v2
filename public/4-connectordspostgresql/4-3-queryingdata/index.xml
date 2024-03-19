@@ -5,6 +5,7 @@
     <link>/4-connectordspostgresql/4-3-queryingdata/</link>
     <description>Recent content in Querying Data on AWS RDS PostgreSQL</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="/4-connectordspostgresql/4-3-queryingdata/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="/4-connectordspostgresql/4-3-queryingdata/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -98,18 +98,6 @@
                 href="/2-preparation/"
                 />
   </url><url>
-    <loc>/3-startwithpostgresql/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-startwithpostgresql/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-startwithpostgresql/"
-                />
-  </url><url>
     <loc>/4-connectordspostgresql/4-2-usingpsql/</loc>
     <xhtml:link
                 rel="alternate"
@@ -144,6 +132,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/4-connectordspostgresql/4-3-queryingdata/"
+                />
+  </url><url>
+    <loc>/3-startwithpostgresql/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-startwithpostgresql/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-startwithpostgresql/"
                 />
   </url><url>
     <loc>/3-startwithpostgresql/3-3-tablesdatatypes/</loc>

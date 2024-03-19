@@ -5,6 +5,7 @@
     <link>/4-connectordspostgresql/</link>
     <description>Recent content in Connect to RDS PostgreSQL AWS  on AWS RDS PostgreSQL</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="/4-connectordspostgresql/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="/4-connectordspostgresql/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

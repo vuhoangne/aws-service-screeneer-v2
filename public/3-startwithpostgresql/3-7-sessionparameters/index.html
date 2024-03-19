@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Session parameters :: AWS RDS PostgreSQL</title>
 
     
-    <link href="/css/nucleus.css?1696781237" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696781237" rel="stylesheet">
-    <link href="/css/hybrid.css?1696781237" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696781237" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696781237" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696781237" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696781237" rel="stylesheet">
-    <link href="/css/theme.css?1696781237" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696781237" rel="stylesheet">
+    <link href="/css/nucleus.css?1710861295" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710861295" rel="stylesheet">
+    <link href="/css/hybrid.css?1710861295" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710861295" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710861295" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710861295" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710861295" rel="stylesheet">
+    <link href="/css/theme.css?1710861295" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710861295" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1696781237" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710861295" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696781237"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710861295"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696781237"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696781237"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710861295"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710861295"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696781237"></script>
+<script type="text/javascript" src="/js/search.js?1710861295"></script>
 
     
   </div>
@@ -307,13 +307,13 @@
  
   
     
-    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create RDS PostgreSQL DB" class="dd-item 
+    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create an RDS PostgreSQL DB" class="dd-item 
         
         
         
         ">
       <a href="/2-preparation/2-7-createrdsdb/">
-           <b> 2.7. </b> Create RDS PostgreSQL DB
+           <b> 2.7. </b> Create an RDS PostgreSQL DB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4" class="dd-item 
+    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4 tool" class="dd-item 
         
         
         
         ">
       <a href="/3-startwithpostgresql/3-1-pgadmin/">
-           <b> 3.1. </b> pgAdmin4
+           <b> 3.1. </b> pgAdmin4 tool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -925,35 +925,53 @@
 </div>
 
 <p>This chapter will talk about <a href="https://www.postgresql.org/docs/11/runtime-config.html">PostgreSQL Parameters</a> . Specifically, it will focus on parameters that can be changed at the session-level. For system-wide parameters, you would leverage RDS/Aurora&rsquo;s Parameter Group mechanism.</p>
-<p>1.In pgAdmin, click on the rdspg-fcj-labs node, then click on <strong>Dashboard</strong>, then click on <strong>Configuration</strong>.</p>
-<p><img src="/images/2/2-7/49.png" alt="parametter"></p>
+<ol>
+<li>In pgAdmin, click on the rdspg-fcj-labs node, then click on <strong>Dashboard</strong>, then click on <strong>Configuration</strong>.
+<img alt="parametter" src="/images/2/2-7/49.png"></li>
+</ol>
 <p>This shows you the current setting of all the <strong>PostgreSQL parameter settings</strong>.</p>
-<p>2.In the search box, type <strong><code>search</code></strong></p>
-<p><img src="/images/2/2-7/50.png" alt="parametter"></p>
+<ol start="2">
+<li>In the search box, type <strong><code>search</code></strong>
+<img alt="parametter" src="/images/2/2-7/50.png"></li>
+</ol>
 <p>This filters down the list of parameter settings.</p>
-<p>3.Click on <strong>first_database</strong>, then choose <strong>Query Tool</strong> icon. Then paste and run the following SQL:</p>
-<p><code>SELECT * FROM pg_settings where context = 'user';</code></p>
-<p><img src="/images/2/2-7/51.png" alt="parametter"></p>
+<ol start="3">
+<li>Click on <strong>first_database</strong>, then choose <strong>Query Tool</strong> icon. Then paste and run the following SQL:
+<code>SELECT * FROM pg_settings where context = 'user';</code>
+<img alt="parametter" src="/images/2/2-7/51.png"></li>
+</ol>
 <p>This shows you the parameter sessions that can be changed for a session, as well as their current setting.</p>
-<p>4.Paste and run the following SQL:</p>
-<p><code>show search_path</code>
-<img src="/images/2/2-7/52.png" alt="parametter">
+<ol start="4">
+<li>
+<p>Paste and run the following SQL:
+<code>show search_path</code>
+<img alt="parametter" src="/images/2/2-7/52.png">
 The <code>SHOW</code> command is another way to view the current value of a setting for your session.</p>
-<p>5.Paste and run the following SQL:
+</li>
+<li>
+<p>Paste and run the following SQL:
 <code>show all</code>
-<img src="/images/2/2-7/53.png" alt="parametter">
+<img alt="parametter" src="/images/2/2-7/53.png">
 This shows you yet another way to view the current value of all of the parameter settings for your session.</p>
-<p>6.Paste and try the following SQL:
+</li>
+<li>
+<p>Paste and try the following SQL:
 <code>select * from first_table;</code>
-<img src="/images/2/2-7/54.png" alt="parametter">
-This fails because PostgreSQL is not able to find a table named <strong>first_table</strong> in the schemas in the current <strong>search_path</strong>.<br>
-7.Paste and try the following SQL:
+<img alt="parametter" src="/images/2/2-7/54.png">
+This fails because PostgreSQL is not able to find a table named <strong>first_table</strong> in the schemas in the current <strong>search_path</strong>.\</p>
+</li>
+<li>
+<p>Paste and try the following SQL:
 <code>SET search_path TO first_schema, public;   </code>
-<img src="/images/2/2-7/55.png" alt="parametter"></p>
-<p>8.Paste and try the following SQL again:
+<img alt="parametter" src="/images/2/2-7/55.png"></p>
+</li>
+<li>
+<p>Paste and try the following SQL again:
 <code>select * from first_table;</code>
-<img src="/images/2/2-7/56.png" alt="parametter">
+<img alt="parametter" src="/images/2/2-7/56.png">
 This now works because we updated the <strong>search_path</strong> parameter setting for our session.</p>
+</li>
+</ol>
 
 <div class="notices tip" ><p>When making changes to system parameters via RDS/Aurora Parameter Groups, it is a good idea to confirm that your parameter change has been applied by using one of the techniques above, such as &ldquo;SHOW ALL&rdquo;, to confirm that the expected parameter value is in effect. Sometimes people can be confused because their Parameter Group change can be made but the actual parameter setting change does not happen <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Troubleshooting.html#CHAP_Troubleshooting.Parameters">until the next reboot</a>. Confirming the value using &ldquo;SHOW ALL&rdquo; or one of the other methods can save you confusion and time</p>
 </div>
@@ -1400,19 +1418,19 @@ This now works because we updated the <strong>search_path</strong> parameter set
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696781237"></script>
-    <script src="/js/jquery.sticky.js?1696781237"></script>
-    <script src="/js/featherlight.min.js?1696781237"></script>
-    <script src="/js/highlight.pack.js?1696781237"></script>
+    <script src="/js/clipboard.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710861295"></script>
+    <script src="/js/jquery.sticky.js?1710861295"></script>
+    <script src="/js/featherlight.min.js?1710861295"></script>
+    <script src="/js/highlight.pack.js?1710861295"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696781237"></script>
-    <script src="/js/learn.js?1696781237"></script>
-    <script src="/js/hugo-learn.js?1696781237"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710861295"></script>
+    <script src="/js/learn.js?1710861295"></script>
+    <script src="/js/hugo-learn.js?1710861295"></script>
 
-    <link href="/mermaid/mermaid.css?1696781237" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696781237"></script>
+    <link href="/mermaid/mermaid.css?1710861295" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710861295"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

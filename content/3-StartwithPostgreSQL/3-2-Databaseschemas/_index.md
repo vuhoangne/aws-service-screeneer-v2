@@ -15,7 +15,7 @@ This chapter assumes you have setup and configured pgAdmin. If you haven't, plea
 
 #### Explore Databases
 
- 1.In your pgAdmin tool, click the *>* in front of **rdspg-fcj-labs** to expand it.
+ 1. In your pgAdmin tool, click the *>* in front of **rdspg-fcj-labs** to expand it.
 
  ![rdspg-fcj-labs](/images/2/2-2/1.png)
  {{% notice note %}}
@@ -24,9 +24,9 @@ This chapter assumes you have setup and configured pgAdmin. If you haven't, plea
  {{% /notice %}}
 
  
- 2.Expand the Databases node.
+ 2. Expand the Databases node.
 
- ![Databases](/images/2/2-2/2.png)
+    ![Databases](/images/2/2-2/2.png)
 
  From a terminology standpoint, the PostgreSQL instance `(rdspg-fcj-labs)` you have created is known as a PostgreSQL **cluster**. A cluster contains one or more **databases**. While the users/roles of a cluster are shared across a cluster, no data is shared across databases. In other words, when a customer connects to a cluster, that connection is required to specify the database it wants to work with and that connection can only work within a single database at a time.\
  {{% notice note %}}
@@ -36,34 +36,34 @@ This chapter assumes you have setup and configured pgAdmin. If you haven't, plea
 
  {{%expand "What is the `rdsadmin` database ?" %}}The database named rdsadmin is a database that is reserved for use by the RDS/Aurora control plane.{{% /expand%}}
 
- 3.Right-click on the **Databases** node and choose **Create**, then click **Databases**
+ 3. Right-click on the **Databases** node and choose **Create**, then click **Databases**
 
- ![Create Databases](/images/2/2-2/3.png)
+    ![Create Databases](/images/2/2-2/3.png)
 
- 4.Name the database `first_database` (but don't save it yet)
+ 4. Name the database `first_database` (but don't save it yet)
 
- ![My Databases](/images/2/2-2/4.png)
+    ![My Databases](/images/2/2-2/4.png)
 
  {{% notice note %}}
- The database has an owner. This role can control and assign permissions for this database to other roles. The owner defaults to the role you are currently logged in with pgAdmin. Also note that you can alter the owner of most PostgreSQL objects even after they are originally created.
+ In PostgreSQL, every database has an owner, which is a role that has full control over the database and can assign permissions to other roles. By default, when a database is created in PostgreSQL, the role used to create the database becomes its owner. In the context of PGAdmin, the role you are logged in with will typically be set as the owner of the database you are currently working with. It's worth mentioning that PostgreSQL allows you to alter the owner of most database objects even after they have been created.
  {{% /notice %}} 
 
- 5.Now click on the **Definition** tab
+ 5. Now click on the **Definition** tab
 
- ![Definition](/images/2/2-2/5.png)
+    ![Definition](/images/2/2-2/5.png)
 
  {{% notice note %}}
  There are [various settings](https://www.postgresql.org/docs/11/sql-createdatabase.html)  that can be changed. You don't need to change anything for now.
  {{% /notice %}}
 
- 6.Click on the **SQL** tab
+ 6. Click on the **SQL** tab
 
- ![SQL](/images/2/2-2/6.png)
+    ![SQL](/images/2/2-2/6.png)
  The SQL tab shows you a preview of the generated SQL command that pgAdmin is going to run.
 
- 7.Click **Save** \
- 8.Find your new database in the navigator and expand it.
- ![SQL](/images/2/2-2/7.png)
+ 7. Click **Save** 
+ 8. Find your new database in the navigator and expand it.
+    ![SQL](/images/2/2-2/7.png)
 
 #### Explore Schemas
 A database contains one or more named **schemas**, which in turn contain tables and other objects like views and functions. The objects in a given PostgreSQL schema can be owned by different users and the schema name has no implied correlation to the name of the schema owner.
@@ -81,26 +81,23 @@ As described in the [PostgreSQL Documentation](https://www.postgresql.org/docs/1
 >
 > Schemas are analogous to directories at the operating system level, except that schemas cannot be nested."
 
-1.Expand the **Schemas** node and see a default **public schema**.
+1. Expand the **Schemas** node and see a default **public schema**.
+    ![Schema](/images/2/2-2/8.png)
 
-![Schema](/images/2/2-2/8.png)
+2. Right-click on the **Schemas** node and choose **Create**, then click **Schema**.
 
+    ![create schema](/images/2/2-2/9.png)
 
+3. Name the schema `first_schema`
 
-2.Right-click on the **Schemas** node and choose **Create**, then click **Schema**.
-
-![create schema](/images/2/2-2/9.png)
-
-3.Name the schema `first_schema`
-
-![named schema](/images/2/2-2/10.png)
+    ![named schema](/images/2/2-2/10.png)
 
 {{% notice note %}}
  The schemas have an owner and also have security permissions and default privileges for new objects created in the schema (you can click on the Security tab and the Default Permissions tab in the Create Schema dialog if you want).
  {{% /notice %}}
 
 
-4.Click **Save** to create the new schema.
+4. Click **Save** to create the new schema.
 
 {{% notice info %}}
 PostgreSQL **schemas** can be different from how other databases like Oracle implement schemas. In Oracle, schemas are directly mapped 1:1 to users. In PostgreSQL, schemas are not coupled directly to a specific user(role).

@@ -5,6 +5,7 @@
     <link>/3-startwithpostgresql/3-2-databaseschemas/</link>
     <description>Recent content in Database and Schemas on AWS RDS PostgreSQL</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="/3-startwithpostgresql/3-2-databaseschemas/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="/3-startwithpostgresql/3-2-databaseschemas/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

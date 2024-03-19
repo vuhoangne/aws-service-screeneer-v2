@@ -7,9 +7,9 @@ chapter : false
 # Let start with AWS RDS PostgreSQL
 
 ### Overall
- In this lab, you'll learn the basics and practice of Amazon RDS PostgreSQL 
- 
- ![intro](/images/1/2.png)
+In this lab, you'll learn the basics and practice of Amazon RDS PostgreSQL 
+
+![intro](/images/1/2.png)
 ### Content
  1. [Introduction](1-introduce/)
  2. [Preparation](2-preparation/)

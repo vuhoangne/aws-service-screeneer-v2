@@ -5,6 +5,7 @@
     <link>/2-preparation/2-6-createec2bastionhost/</link>
     <description>Recent content in Create bastion host EC2 instance  on AWS RDS PostgreSQL</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="/2-preparation/2-6-createec2bastionhost/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="/2-preparation/2-6-createec2bastionhost/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

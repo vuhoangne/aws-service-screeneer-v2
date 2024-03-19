@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Querying Data :: AWS RDS PostgreSQL</title>
 
     
-    <link href="/css/nucleus.css?1696781237" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696781237" rel="stylesheet">
-    <link href="/css/hybrid.css?1696781237" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696781237" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696781237" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696781237" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696781237" rel="stylesheet">
-    <link href="/css/theme.css?1696781237" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696781237" rel="stylesheet">
+    <link href="/css/nucleus.css?1710861295" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710861295" rel="stylesheet">
+    <link href="/css/hybrid.css?1710861295" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710861295" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710861295" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710861295" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710861295" rel="stylesheet">
+    <link href="/css/theme.css?1710861295" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710861295" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1696781237" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710861295" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696781237"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710861295"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696781237"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696781237"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710861295"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710861295"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696781237"></script>
+<script type="text/javascript" src="/js/search.js?1710861295"></script>
 
     
   </div>
@@ -307,13 +307,13 @@
  
   
     
-    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create RDS PostgreSQL DB" class="dd-item 
+    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create an RDS PostgreSQL DB" class="dd-item 
         
         
         
         ">
       <a href="/2-preparation/2-7-createrdsdb/">
-           <b> 2.7. </b> Create RDS PostgreSQL DB
+           <b> 2.7. </b> Create an RDS PostgreSQL DB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4" class="dd-item 
+    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4 tool" class="dd-item 
         
         
         
         ">
       <a href="/3-startwithpostgresql/3-1-pgadmin/">
-           <b> 3.1. </b> pgAdmin4
+           <b> 3.1. </b> pgAdmin4 tool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -932,7 +932,7 @@
 <li>Check whether the user is missing a date of birth, or first name or last name</li>
 </ul>
 <p>Right-click on the name of the database to open the menu and click on the <strong>“Query Tool”</strong> button from the list:</p>
-<p><img src="/images/4/4-3/1.png" alt="querying data"></p>
+<p><img alt="querying data" src="/images/4/4-3/1.png"></p>
 <p>1.Create table <code>fcj_users</code> in the <strong>pglab</strong> database</p>
 <p>Type the following query in the query tool to create a new table:</p>
 <pre tabindex="0"><code>CREATE TABLE fcj_user(
@@ -943,7 +943,7 @@
     date_of_birth DATE,
     nationality VARCHAR (20)
 )
-</code></pre><p><img src="/images/4/4-3/2.png" alt="querying data"></p>
+</code></pre><p><img alt="querying data" src="/images/4/4-3/2.png"></p>
 <p>2.Insert data into the table <strong>fcj_users</strong></p>
 <p>Insert the data into the <strong>fcj_users</strong> table using the following query:</p>
 <pre tabindex="0"><code>INSERT INTO fcj_users (first_name,last_name,gender,date_of_birth,nationality) VALUES
@@ -988,14 +988,14 @@
 (&#39;Harrison&#39;,&#39;Ford&#39;,&#39;M&#39;,&#39;1942-07-13&#39;,&#39;American&#39;),
 (&#39;Darian&#39;,&#39;Cunha&#39;,&#39;M&#39;,&#39;1988-07-26&#39;,&#39;American&#39;),
 (&#39;Jodie&#39;,&#39;Foster&#39;,&#39;F&#39;,&#39;1962-11-19&#39;,&#39;Chinese&#39;);
-</code></pre><p><img src="/images/4/4-3/4.png" alt="querying data"></p>
+</code></pre><p><img alt="querying data" src="/images/4/4-3/4.png"></p>
 <p>3.View all the recording in the table</p>
 <p>Type the following query in the query tool to view all recording:
 <code>SElECT * FROM fcj_users;</code></p>
 <p>4.View full name user and nationality</p>
 <p>Type the following query in the query tool :</p>
 <pre tabindex="0"><code>SELECT first_name || &#39; &#39; || last_name || &#39; from &#39; || nationality AS &#34;Full name&#34; &amp; nationality FROM fcj_users;
-</code></pre><p><img src="/images/4/4-3/5.png" alt="querying data"></p>
+</code></pre><p><img alt="querying data" src="/images/4/4-3/5.png"></p>
 <p>5.Get all user from Swedish or American and date of birth from 1980 to 1990. Sort output list descending by date_of_birth</p>
 <p>Type the following query in the query tool :</p>
 <pre tabindex="0"><code>SELECT * FROM fcj_users
@@ -1003,26 +1003,26 @@ WHERE nationality = &#39;Swedish&#39; OR
       nationality = &#39;American&#39; AND
       date_of_birth BETWEEN &#39;1980-01-01&#39; AND &#39;1990-12-31&#39;
 ORDER BY date_of_birth DESC;
-</code></pre><p><img src="/images/4/4-3/6.png" alt="querying data"></p>
+</code></pre><p><img alt="querying data" src="/images/4/4-3/6.png"></p>
 <p>6.List top 5 the youngest users</p>
 <p>Type the following query in the query tool :</p>
 <pre tabindex="0"><code>SELECT * FROM fcj_users
 ORDER BY date_of_birth DESC
 FETCH FIRST 5 ROW ONLY;
-</code></pre><p><img src="/images/4/4-3/7.png" alt="querying data"></p>
+</code></pre><p><img alt="querying data" src="/images/4/4-3/7.png"></p>
 <p>7.List top 5 the oldest users</p>
 <p>Type the following query in the query tool :</p>
 <pre tabindex="0"><code>SELECT * FROM fcj_users
 ORDER BY date_of_birth ASC
 FETCH FIRST 5 ROW ONLY;
-</code></pre><p><img src="/images/4/4-3/8.png" alt="querying data"></p>
+</code></pre><p><img alt="querying data" src="/images/4/4-3/8.png"></p>
 <p>9.Check whether the user is missing a date of birth, or first name or last name</p>
 <pre tabindex="0"><code>SELECT *
 FROM fcj_users
 WHERE date_of_birth IS NULL
 OR first_name IS NULL
 OR last_name IS NULL ;
-</code></pre><p><img src="/images/4/4-3/9.png" alt="querying data"></p>
+</code></pre><p><img alt="querying data" src="/images/4/4-3/9.png"></p>
 
 
 
@@ -1465,19 +1465,19 @@ OR last_name IS NULL ;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696781237"></script>
-    <script src="/js/jquery.sticky.js?1696781237"></script>
-    <script src="/js/featherlight.min.js?1696781237"></script>
-    <script src="/js/highlight.pack.js?1696781237"></script>
+    <script src="/js/clipboard.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710861295"></script>
+    <script src="/js/jquery.sticky.js?1710861295"></script>
+    <script src="/js/featherlight.min.js?1710861295"></script>
+    <script src="/js/highlight.pack.js?1710861295"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696781237"></script>
-    <script src="/js/learn.js?1696781237"></script>
-    <script src="/js/hugo-learn.js?1696781237"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710861295"></script>
+    <script src="/js/learn.js?1710861295"></script>
+    <script src="/js/hugo-learn.js?1710861295"></script>
 
-    <link href="/mermaid/mermaid.css?1696781237" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696781237"></script>
+    <link href="/mermaid/mermaid.css?1710861295" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710861295"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,38 +1,44 @@
 ---
-title : "Configure the database client"
+title : "Sử dụng pgAdmin4 để kết nối đến RDS PostgreSQL"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
 pre : " <b> 4.1. </b> "
 ---
 
- After Amazon RDS provisions your DB instance, you can use any standard SQL client application to connect to the instance. Before you can connect, the DB instance must be available and accessible. Whether you can connect to the instance from outside the VPC depends on how you created the Amazon RDS DB instance:
- - If you created your DB instance as **public**, **devices and Amazon EC2 instances outside** the VPC can connect to your database.
- - If you created your DB instance as **private**, **only Amazon EC2 instances and devices inside** the Amazon VPC can connect to your database.
 
  {{% notice note%}}
- In this chapter, we will use **pgAdmin4** to connect to a RDS for PostgreSQL DB instance, so we need create DB as public.\
- You can use the open-source tool **pgAdmin4** to connect to your RDS for PostgreSQL DB instance. You can download and install pgAdmin from http://www.pgadmin.org/ without having a local instance of PostgreSQL on your client computer
+ Trong phần này, chúng tôi sẽ sử dụng **pgAdmin4** để kết nối với RDS cho phiên bản DB PostgreSQL, vì vậy chúng tôi cần tạo DB ở chế độ công khai.\
+  Bạn có thể sử dụng công cụ nguồn mở **pgAdmin4** để kết nối với phiên bản RDS cho PostgreSQL DB của mình. Bạn có thể tải xuống và cài đặt pgAdmin từ http://www.pgadmin.org/ mà không cần có phiên bản cục bộ của PostgreSQL trên máy khách của bạn
  {{% /notice %}}
 
 
- 1.Launch the **pgAdmin4** application on your client computer.\
- 2.On the **Dashboard** tab, choose **Add New Server.**
- ![connecting](/images/4/4-1/14.png)
- 3.In the **Create - Server** dialog box, type a name on the **General** tab to identify the server in pgAdmin4. 
- ![connecting](/images/4/4-1/1.png)
- 
- 4.In the **Connection** tab, type the following information from your DB instance:
- - For **Host**, type the endpoint you have retrieve in the [step 3.2](3-2-retrievebdinstancendpoint/), for example mypostgresql.c6c8dntfzzhgv0.us-east-2.rds.amazonaws.com.
- - For **Port**, type the assigned port.
- - For **Username**, type the user name that you entered when you created the DB instance. 
- - For **Password**, type the password that you entered when you created the DB instance.
+ 1. Khởi chạy ứng dụng **pgAdmin4** trên máy của bạn.\
+ 2. Trên tab **Dashboard**, chọn **Add New Server.**
+     ![connecting](/images/4/4-1/14.png)
+ 3. Trong hộp thoại **Create - Server**, nhập tên trên tab **General** để xác định máy chủ trong pgAdmin4.
 
- ![connecting](/images/4/4-1/2.png)
+     ![connecting](/images/4/4-1/1.png)
  
- 5.Choose **Save**.
- ![connecting](/images/4/4-1/6.png)
+ 4. Trong tab **Connection**, nhập thông tin sau từ DB instance của bạn:
+    - Đối với **Host**, Endpoint của RDS PostgreSQL DB, ví dụ mypostgresql.c6c8dntfzzhgv0.us-east-2.rds.amazonaws.com.
+    - Đối với **Port**, nhập port được chỉ định.
+    - Đối với **Username**, nhập tên người dùng mà bạn đã nhập khi tạo DB instance.
+    - Đối với **Password**, nhập mật khẩu bạn đã nhập khi tạo DB instance.
+    ![connecting](/images/4/4-1/2.png)
+ 
+ 5. Trong tab **Đường hầm SSH**, bật tính năng đường hầm SSH và nhập thông tin sau
+    - Đối với **Host**: Tên máy chủ hoặc địa chỉ IP của máy chủ pháo đài.
+    - Đối với **Port**: Số cổng SSH.
+    - Đối với **Tên người dùng**: Tên người dùng mà bạn sử dụng để SSH vào máy chủ pháo đài.
+    - Đối với **Identity file**: chọn cặp khóa bạn đã chọn khi tạo máy chủ pháo đài ec2.
+     ![connecting](/images/4/4-1/3.png)
+  
+ 6. Chọn **Save**.
+ 
+    Server đã được thêm vào pgAdmin4 và bảng điều khiển của nó hiển thị trên màn hình:
+    ![connecting](/images/4/4-1/6.png)
 
  {{% notice tip%}}
- If you have any problems connecting, see [Troubleshooting connections to your RDS for PostgreSQL instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToPostgreSQLInstance.html#USER_ConnectToPostgreSQLInstance.Troubleshooting).
+ Nếu bạn gặp bất kỳ sự cố nào khi kết nối, hãy xem [Khắc phục sự cố kết nối với RDS for PostgreSQL instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToPostgreSQLInstance.html#USER_ConnectToPostgreSQLInstance.Troubleshooting).
  {{% /notice %}}

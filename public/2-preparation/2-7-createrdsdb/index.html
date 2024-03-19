@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Create RDS PostgreSQL DB :: AWS RDS PostgreSQL</title>
+    <title>Create an RDS PostgreSQL DB :: AWS RDS PostgreSQL</title>
 
     
-    <link href="/css/nucleus.css?1696781237" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696781237" rel="stylesheet">
-    <link href="/css/hybrid.css?1696781237" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696781237" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696781237" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696781237" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696781237" rel="stylesheet">
-    <link href="/css/theme.css?1696781237" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696781237" rel="stylesheet">
+    <link href="/css/nucleus.css?1710861295" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710861295" rel="stylesheet">
+    <link href="/css/hybrid.css?1710861295" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710861295" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710861295" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710861295" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710861295" rel="stylesheet">
+    <link href="/css/theme.css?1710861295" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710861295" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1696781237" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710861295" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696781237"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710861295"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696781237"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696781237"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710861295"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710861295"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696781237"></script>
+<script type="text/javascript" src="/js/search.js?1710861295"></script>
 
     
   </div>
@@ -307,13 +307,13 @@
  
   
     
-    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create RDS PostgreSQL DB" class="dd-item 
+    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create an RDS PostgreSQL DB" class="dd-item 
         
         active
         
         ">
       <a href="/2-preparation/2-7-createrdsdb/">
-           <b> 2.7. </b> Create RDS PostgreSQL DB
+           <b> 2.7. </b> Create an RDS PostgreSQL DB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4" class="dd-item 
+    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4 tool" class="dd-item 
         
         
         
         ">
       <a href="/3-startwithpostgresql/3-1-pgadmin/">
-           <b> 3.1. </b> pgAdmin4
+           <b> 3.1. </b> pgAdmin4 tool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -883,7 +883,7 @@
             
           
           
-            <a href='/'>AWS RDS PostgreSQL</a> > <a href='/2-preparation/'>Preparation Step</a> > Create RDS PostgreSQL DB
+            <a href='/'>AWS RDS PostgreSQL</a> > <a href='/2-preparation/'>Preparation Step</a> > Create an RDS PostgreSQL DB
           
         
           
@@ -920,7 +920,7 @@
           
             <h1>
               
-              Create RDS PostgreSQL DB
+              Create an RDS PostgreSQL DB
             </h1>
           
 
@@ -930,72 +930,90 @@
 
 	<h4 id="to-create-an-rds-postgresql-db-follow-these-steps">To create an RDS PostgreSQL DB, follow these steps:</h4>
 <ol>
-<li>Open the <strong>Amazon RDS</strong> <a href="https://console.aws.amazon.com/rds/">console</a>.</li>
-</ol>
-<p><img src="/images/preparation/db/1.png" alt="Create EC2 SG"></p>
-<ol start="2">
-<li>Click <strong>Create database</strong>.</li>
-<li>For <strong>Database engine</strong>, select <strong>PostgreSQL</strong>.</li>
-<li>For <strong>Version</strong>, select the version of PostgreSQL that you want to use.</li>
-</ol>
-<p><img src="/images/preparation/db/2.png" alt="Create EC2 SG"></p>
-<ol start="5">
-<li>For <strong>Template</strong>, select a template for your DB instance. A template is a pre-configured configuration for a DB instance.</li>
-</ol>
-<p><img src="/images/preparation/db/3.png" alt="Create EC2 SG"></p>
-<ol start="6">
-<li>For <strong>Availability</strong> and <strong>Durability</strong>, For DB instance identifier, enter a name for your DB instance.</li>
-</ol>
-<p><img src="/images/preparation/db/4.png" alt="Create EC2 SG"></p>
-<ol start="7">
-<li>For <strong>DB instance identifier</strong>, enter a unique name for your database instance.</li>
-<li>For <strong>Master username</strong>, enter the username for the master user of your database instance.</li>
-<li>For <strong>Master password</strong>, enter a strong password for the master user of your database instance.</li>
-</ol>
-<p><img src="/images/preparation/db/5.png" alt="Create EC2 SG"></p>
-<ol start="10">
-<li>For <strong>DB instance class</strong>, select the instance class that you want to use for your database instance. The instance class will determine the amount of CPU and memory that is allocated to your database instance.</li>
-</ol>
-<p><img src="/images/preparation/db/6.png" alt="Create EC2 SG"></p>
-<ol start="11">
-<li>For <strong>Storage</strong>, select the amount of storage that you want to allocate for your database instance.</li>
-</ol>
-<p><img src="/images/preparation/db/7.png" alt="Create EC2 SG"></p>
-<ol start="12">
-<li>For <strong>Connectivity</strong>, select option <strong>Connect to a EC2 compute resource</strong>, then choose your <strong>App server</strong> instance which you have created in the earier step.</li>
-</ol>
-<p><img src="/images/preparation/db/8.png" alt="Create EC2 SG"></p>
-<ol start="13">
-<li>For <strong>DB subnet group</strong>, select the DB subnet group that you want to use for your DB instance.</li>
-<li>For <strong>VPC security groups</strong>, select the security groups that you want to use for your DB instance.</li>
-</ol>
-<p><img src="/images/preparation/db/9.png" alt="Create EC2 SG"></p>
-<ol start="15">
-<li>Expand <strong>Additional configuration</strong>, Enter <strong>5432</strong> for <strong>database port</strong></li>
-</ol>
-<p><img src="/images/preparation/db/10.png" alt="Create EC2 SG"></p>
-<ol start="16">
-<li>For <strong>Database authentication</strong>, choose option that you want to use</li>
-</ol>
-<p><img src="/images/preparation/db/11.png" alt="Create EC2 SG"></p>
-<ol start="17">
-<li>For <strong>Monitoring</strong>, select the monitoring options that you want to use for your database instance</li>
-</ol>
-<p><img src="/images/preparation/db/12.png" alt="Create EC2 SG"></p>
-<ol start="18">
-<li>Expand <strong>Additional configuration</strong>:</li>
+<li>
+<p>Open the <strong>Amazon RDS</strong> <a href="https://console.aws.amazon.com/rds/">console</a>.</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/1.png"></p>
+</li>
+<li>
+<p>Click <strong>Create database</strong>.</p>
+</li>
+<li>
+<p>For <strong>Database engine</strong>, select <strong>PostgreSQL</strong>.</p>
+</li>
+<li>
+<p>For <strong>Version</strong>, select the version of PostgreSQL that you want to use.</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/2.png"></p>
+</li>
+<li>
+<p>For <strong>Template</strong>, select a template for your DB instance. A template is a pre-configured configuration for a DB instance.</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/3.png"></p>
+</li>
+<li>
+<p>For <strong>Availability</strong> and <strong>Durability</strong>, For DB instance identifier, enter a name for your DB instance.</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/4.png"></p>
+</li>
+<li>
+<p>For <strong>DB instance identifier</strong>, enter a unique name for your database instance.</p>
+</li>
+<li>
+<p>For <strong>Master username</strong>, enter the username for the master user of your database instance.</p>
+</li>
+<li>
+<p>For <strong>Master password</strong>, enter a strong password for the master user of your database instance.</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/5.png"></p>
+</li>
+<li>
+<p>For <strong>DB instance class</strong>, select the instance class that you want to use for your database instance. The instance class will determine the amount of CPU and memory that is allocated to your database instance.</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/6.png"></p>
+</li>
+<li>
+<p>For <strong>Storage</strong>, select the amount of storage that you want to allocate for your database instance.</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/7.png"></p>
+</li>
+<li>
+<p>For <strong>Connectivity</strong>, select option <strong>Connect to a EC2 compute resource</strong>, then choose your <strong>App server</strong> instance which you have created in the earier step.</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/8.png"></p>
+</li>
+<li>
+<p>For <strong>DB subnet group</strong>, select the DB subnet group that you want to use for your DB instance.</p>
+</li>
+<li>
+<p>For <strong>VPC security groups</strong>, select the security groups that you want to use for your DB instance.</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/9.png"></p>
+</li>
+<li>
+<p>Expand <strong>Additional configuration</strong>, Enter <strong>5432</strong> for <strong>database port</strong></p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/10.png"></p>
+</li>
+<li>
+<p>For <strong>Database authentication</strong>, choose option that you want to use</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/11.png"></p>
+</li>
+<li>
+<p>For <strong>Monitoring</strong>, select the monitoring options that you want to use for your database instance</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/12.png"></p>
+</li>
+<li>
+<p>Expand <strong>Additional configuration</strong>:</p>
+</li>
 </ol>
 <ul>
-<li>For <strong>Database option</strong>, fill name for database you want create after lauch RDS PostgreSQL</li>
-<li>For <strong>DB parameter group</strong>, leave everything with default setting</li>
+<li>
+<p>For <strong>Database option</strong>, fill name for database you want create after lauch RDS PostgreSQL</p>
+</li>
+<li>
+<p>For <strong>DB parameter group</strong>, leave everything with default setting</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/13.png"></p>
+</li>
 </ul>
-<p><img src="/images/preparation/db/13.png" alt="Create EC2 SG"></p>
 <ol start="19">
-<li>For <strong>Backup</strong>, select the backup options that you want to use for your database instance.</li>
-</ol>
-<p><img src="/images/preparation/db/14.png" alt="Create EC2 SG"></p>
-<ol start="20">
-<li>Click <strong>Create database</strong>.</li>
+<li>
+<p>For <strong>Backup</strong>, select the backup options that you want to use for your database instance.</p>
+<p><img alt="Create EC2 SG" src="/images/preparation/db/14.png"></p>
+</li>
+<li>
+<p>Click <strong>Create database</strong>.</p>
+</li>
 </ol>
 <p>Your database instance will be created and will be displayed in the list of database instances. You can connect to it using a PostgreSQL client, such as psql, pgAdmin4. To do this, you will need the hostname, port number, and username and password for your database instance.</p>
 <p><strong>Here are some additional things to keep in mind when creating an RDS PostgreSQL DB:</strong>
@@ -1463,19 +1481,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696781237"></script>
-    <script src="/js/jquery.sticky.js?1696781237"></script>
-    <script src="/js/featherlight.min.js?1696781237"></script>
-    <script src="/js/highlight.pack.js?1696781237"></script>
+    <script src="/js/clipboard.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710861295"></script>
+    <script src="/js/jquery.sticky.js?1710861295"></script>
+    <script src="/js/featherlight.min.js?1710861295"></script>
+    <script src="/js/highlight.pack.js?1710861295"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696781237"></script>
-    <script src="/js/learn.js?1696781237"></script>
-    <script src="/js/hugo-learn.js?1696781237"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710861295"></script>
+    <script src="/js/learn.js?1710861295"></script>
+    <script src="/js/hugo-learn.js?1710861295"></script>
 
-    <link href="/mermaid/mermaid.css?1696781237" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696781237"></script>
+    <link href="/mermaid/mermaid.css?1710861295" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710861295"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Verify DB instance :: AWS System Manager</title>
+    <title>Truy vấn dữ liệu :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1696781237" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696781237" rel="stylesheet">
-    <link href="/css/hybrid.css?1696781237" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696781237" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696781237" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696781237" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696781237" rel="stylesheet">
-    <link href="/css/theme.css?1696781237" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696781237" rel="stylesheet">
+    <link href="/css/nucleus.css?1710861295" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710861295" rel="stylesheet">
+    <link href="/css/hybrid.css?1710861295" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710861295" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710861295" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710861295" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710861295" rel="stylesheet">
+    <link href="/css/theme.css?1710861295" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710861295" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1696781237" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710861295" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696781237"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710861295"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696781237"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696781237"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710861295"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710861295"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696781237"></script>
+<script type="text/javascript" src="/js/search.js?1710861295"></script>
 
     
   </div>
@@ -82,13 +82,39 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation/" title="AWS RDS PostgreSQL" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-introduce/">
+           <b> 1. </b> Giới thiệu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparation/" title="Các bước chuẩn bị" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-preparation/">
-          AWS RDS PostgreSQL
+           <b> 2. </b> Các bước chuẩn bị
           
             <i class="fas fa-check read-icon"></i>
           
@@ -113,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation/2-1-createvpc/" title="AWS RDS PostgreSQL" class="dd-item 
+    <li data-nav-id="/vi/2-preparation/2-1-createvpc/" title="Tạo VPC" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-preparation/2-1-createvpc/">
-          AWS RDS PostgreSQL
+           <b> 2.1. </b> Tạo VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -141,13 +167,13 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation/2-2-createec2sg/" title="AWS RDS PostgreSQL" class="dd-item 
+    <li data-nav-id="/vi/2-preparation/2-2-createec2sg/" title="Tạo EC2 Security Group" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-preparation/2-2-createec2sg/">
-          AWS RDS PostgreSQL
+           <b> 2.2. </b> Tạo EC2 Security Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +195,13 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation/2-3-createrdssg/" title="AWS RDS PostgreSQL" class="dd-item 
+    <li data-nav-id="/vi/2-preparation/2-3-createrdssg/" title="Tạo RDS Security Group" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-preparation/2-3-createrdssg/">
-          AWS RDS PostgreSQL
+           <b> 2.3. </b> Tạo RDS Security Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +223,13 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation/2-4-createdbsubnetgroup/" title="AWS RDS PostgreSQL" class="dd-item 
+    <li data-nav-id="/vi/2-preparation/2-4-createdbsubnetgroup/" title="Tạo DB Subnet Group" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-preparation/2-4-createdbsubnetgroup/">
-          AWS RDS PostgreSQL
+           <b> 2.4. </b> Tạo DB Subnet Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -225,13 +251,13 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation/2-5-createec2appsv/" title="AWS RDS PostgreSQL" class="dd-item 
+    <li data-nav-id="/vi/2-preparation/2-5-createec2appsv/" title="Tạo EC2 instance cho App Server" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-preparation/2-5-createec2appsv/">
-          AWS RDS PostgreSQL
+           <b> 2.5. </b> Tạo EC2 instance cho App Server
           
             <i class="fas fa-check read-icon"></i>
           
@@ -253,13 +279,13 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation/2-6-createec2bastionhost/" title="AWS RDS PostgreSQL" class="dd-item 
+    <li data-nav-id="/vi/2-preparation/2-6-createec2bastionhost/" title="Tạo EC2 instance bastion h " class="dd-item 
         
         
         
         ">
       <a href="/vi/2-preparation/2-6-createec2bastionhost/">
-          AWS RDS PostgreSQL
+           <b> 2.6. </b> Tạo EC2 instance bastion h 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -281,13 +307,13 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation/2-7-createrdsdb/" title="AWS RDS PostgreSQL" class="dd-item 
+    <li data-nav-id="/vi/2-preparation/2-7-createrdsdb/" title="Tạo RDS PostgreSQL DB" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-preparation/2-7-createrdsdb/">
-          AWS RDS PostgreSQL
+           <b> 2.7. </b> Tạo RDS PostgreSQL DB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -316,39 +342,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/" title="Introduction" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/1-introduce/">
-           <b> 1. </b> Introduction
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-startwithpostgresql/" title="Start with PostgreSQL" class="dd-item 
+    <li data-nav-id="/vi/3-startwithpostgresql/" title="Bắt đầu với PostgreSQL" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-startwithpostgresql/">
-           <b> 2. </b> Start with PostgreSQL
+           <b> 3. </b> Bắt đầu với PostgreSQL
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/vi/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4" class="dd-item 
+    <li data-nav-id="/vi/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4 tool" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-startwithpostgresql/3-1-pgadmin/">
-           <b> 2.1. </b> pgAdmin4
+           <b> 3.1. </b> pgAdmin4 tool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -401,13 +401,13 @@
  
   
     
-    <li data-nav-id="/vi/3-startwithpostgresql/3-2-databaseschemas/" title="Database and Schemas" class="dd-item 
+    <li data-nav-id="/vi/3-startwithpostgresql/3-2-databaseschemas/" title="Database và Schemas" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-startwithpostgresql/3-2-databaseschemas/">
-           <b> 2.2. </b> Database and Schemas
+           <b> 3.2. </b> Database và Schemas
           
             <i class="fas fa-check read-icon"></i>
           
@@ -429,13 +429,13 @@
  
   
     
-    <li data-nav-id="/vi/3-startwithpostgresql/3-3-tablesdatatypes/" title="Tables and Datatypes" class="dd-item 
+    <li data-nav-id="/vi/3-startwithpostgresql/3-3-tablesdatatypes/" title="Tables và Datatypes" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-startwithpostgresql/3-3-tablesdatatypes/">
-           <b> 2.3. </b> Tables and Datatypes
+           <b> 3.3. </b> Tables và Datatypes
           
             <i class="fas fa-check read-icon"></i>
           
@@ -457,13 +457,13 @@
  
   
     
-    <li data-nav-id="/vi/3-startwithpostgresql/3-4-basicdml/" title="Basic DML" class="dd-item 
+    <li data-nav-id="/vi/3-startwithpostgresql/3-4-basicdml/" title="Basic DML (Data Manipulation Language)" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-startwithpostgresql/3-4-basicdml/">
-           <b> 2.4. </b> Basic DML
+           <b> 3.4. </b> Basic DML (Data Manipulation Language)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -485,13 +485,13 @@
  
   
     
-    <li data-nav-id="/vi/3-startwithpostgresql/3-5-rolesusers/" title="Roles and Users" class="dd-item 
+    <li data-nav-id="/vi/3-startwithpostgresql/3-5-rolesusers/" title="Roles và Users" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-startwithpostgresql/3-5-rolesusers/">
-           <b> 2.5. </b> Roles and Users
+           <b> 3.5. </b> Roles và Users
           
             <i class="fas fa-check read-icon"></i>
           
@@ -519,7 +519,7 @@
         
         ">
       <a href="/vi/3-startwithpostgresql/3-6-catalodatadictonary/">
-           <b> 2.6. </b> Catalog and Data dictionary
+           <b> 3.6. </b> Catalog and Data dictionary
           
             <i class="fas fa-check read-icon"></i>
           
@@ -547,7 +547,7 @@
         
         ">
       <a href="/vi/3-startwithpostgresql/3-7-sessionparameters/">
-           <b> 2.8. </b> Session parameters
+           <b> 3.7. </b> Session parameters
           
             <i class="fas fa-check read-icon"></i>
           
@@ -576,13 +576,13 @@
  
   
     
-    <li data-nav-id="/vi/4-connectordspostgresql/" title="Import data into PostgreSQl" class="dd-item 
+    <li data-nav-id="/vi/4-connectordspostgresql/" title="Kết nối với RDS PostgreSQL AWS " class="dd-item 
         parent
         
         
         ">
       <a href="/vi/4-connectordspostgresql/">
-           <b> 4. </b> Import data into PostgreSQl
+           <b> 4. </b> Kết nối với RDS PostgreSQL AWS 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -607,13 +607,13 @@
  
   
     
-    <li data-nav-id="/vi/4-connectordspostgresql/4-1-usingpgadmin4/" title="Configure the database client" class="dd-item 
+    <li data-nav-id="/vi/4-connectordspostgresql/4-1-usingpgadmin4/" title="Sử dụng pgAdmin4 để kết nối đến RDS PostgreSQL" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-connectordspostgresql/4-1-usingpgadmin4/">
-           <b> 4.1. </b> Configure the database client
+           <b> 4.1. </b> Sử dụng pgAdmin4 để kết nối đến RDS PostgreSQL
           
             <i class="fas fa-check read-icon"></i>
           
@@ -635,41 +635,41 @@
  
   
     
-    <li data-nav-id="/vi/4-connectordspostgresql/4-3-queryingdata/" title="Verify DB instance" class="dd-item 
-        
-        active
-        
-        ">
-      <a href="/vi/4-connectordspostgresql/4-3-queryingdata/">
-           <b> 2. </b> Verify DB instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-connectordspostgresql/4-2-usingpsql/" title="Import data into PostgreSQl" class="dd-item 
+    <li data-nav-id="/vi/4-connectordspostgresql/4-2-usingpsql/" title="Sử dụng EC2 instance để kết nối với RDS PostgreSQL" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-connectordspostgresql/4-2-usingpsql/">
-           <b> 4. </b> Import data into PostgreSQl
+           <b> 4.2 </b> Sử dụng EC2 instance để kết nối với RDS PostgreSQL
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-connectordspostgresql/4-3-queryingdata/" title="Truy vấn dữ liệu" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/vi/4-connectordspostgresql/4-3-queryingdata/">
+           <b> 4.3. </b> Truy vấn dữ liệu
           
             <i class="fas fa-check read-icon"></i>
           
@@ -698,13 +698,13 @@
  
   
     
-    <li data-nav-id="/vi/5-helpfulresources/" title="Querying data" class="dd-item 
+    <li data-nav-id="/vi/5-helpfulresources/" title="Tài liệu tham khảo" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-helpfulresources/">
-           <b> 5. </b> Querying data
+           <b> 5. </b> Tài liệu tham khảo
           
             <i class="fas fa-check read-icon"></i>
           
@@ -883,7 +883,7 @@
             
           
           
-            <a href='/vi/'>AWS RDS PostgreSQL</a> > <a href='/vi/4-connectordspostgresql/'>Import data into PostgreSQl</a> > Verify DB instance
+            <a href='/vi/'>AWS RDS PostgreSQL</a> > <a href='/vi/4-connectordspostgresql/'>Kết nối với RDS PostgreSQL AWS </a> > Truy vấn dữ liệu
           
         
           
@@ -912,7 +912,7 @@
           
             <h1>
               
-              Verify DB instance
+              Truy vấn dữ liệu
             </h1>
           
 
@@ -920,7 +920,110 @@
 
 
 
-	
+	<p>Sau khi sử dụng pgAdmin 4 để kết nối đến RDS PostgreSQL. Bây giờ chúng ta có thể thực hiện các câu lệnh truy vấn cơ bản trong chương này:</p>
+<ul>
+<li>Tạo bảng <code>fcj_users</code> trong cơ sở dữ liệu <strong>pglab</strong></li>
+<li>Chèn dữ liệu vào bảng <code>fcj_users</code></li>
+<li>Xem tất cả các bản ghi trong bảng</li>
+<li>Xem tên người dùng và quốc tịch đầy đủ</li>
+<li>Lấy tất cả người dùng từ Thụy Điển hoặc Mỹ và ngày sinh từ 1980 đến 1990. Sắp xếp danh sách đầu ra giảm dần theo date_of_birth</li>
+<li>Liệt kê top 5 người dùng trẻ tuổi nhất</li>
+<li>Danh sách top 5 người dùng lớn tuổi nhất</li>
+<li>Kiểm tra xem người dùng có thiếu ngày sinh, họ hoặc tên không</li>
+</ul>
+<p>Nhấp chuột phải vào tên cơ sở dữ liệu để mở menu và nhấp vào nút <strong>“Công cụ truy vấn”</strong> từ danh sách:</p>
+<p><img alt="querying data" src="/images/4/4-3/1.png"></p>
+<p>1.Tạo bảng <code>fcj_users</code> trong cơ sở dữ liệu <strong>pglab</strong></p>
+<p>Type the following query in the query tool to create a new table:</p>
+<pre tabindex="0"><code>CREATE TABLE fcj_user(
+    user_id SERIAL NOT NULL PRIMARY KEY,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    gender char(1),
+    date_of_birth DATE,
+    nationality VARCHAR (20)
+)
+</code></pre><p><img alt="querying data" src="/images/4/4-3/2.png"></p>
+<p>2.Chèn dữ liệu vào bảng <strong>fcj_users</strong></p>
+<p>Chèn dữ liệu vào bảng <strong>fcj_users</strong> bằng truy vấn sau:</p>
+<pre tabindex="0"><code>INSERT INTO fcj_users (first_name,last_name,gender,date_of_birth,nationality) VALUES
+(&#39;Malin&#39;,&#39;Akerman&#39;,&#39;F&#39;,&#39;1978-05-12&#39;,&#39;Swedish&#39;),
+(&#39;Tim&#39;,&#39;Allen&#39;,&#39;M&#39;,&#39;1953-06-13&#39;,&#39;American&#39;),
+(&#39;Julie&#39;,&#39;Andrews&#39;,&#39;F&#39;,&#39;1935-10-01&#39;,&#39;American&#39;),
+(&#39;Ivana&#39;,&#39;Baquero&#39;,&#39;F&#39;,&#39;1994-06-11&#39;,&#39;Bristish&#39;),
+(&#39;Lorraine&#39;,&#39;Bracco&#39;,&#39;F&#39;,&#39;1954-10-02&#39;,&#39;Mexican&#39;),
+(&#39;Alice&#39;,&#39;Braga&#39;,&#39;F&#39;,&#39;1983-04-15&#39;,&#39;Japanese&#39;)
+(&#39;Marlon&#39;,&#39;Brando&#39;,&#39;M&#39;,&#39;1924-04-03&#39;,&#39;American&#39;)
+(&#39;Adrien&#39;,&#39;Brody&#39;,&#39;M&#39;,&#39;1973-04-14&#39;,&#39;Mexican&#39;),
+(&#39;Peter&#39;,&#39;Carlberg&#39;,&#39;M&#39;,&#39;1950-12-08&#39;,&#39;Chinese&#39;),
+(&#39;Gemma&#39;,&#39;Chan&#39;,&#39;F&#39;,&#39;1982-11-29&#39;,&#39;Japanese&#39;),
+(&#39;Chen&#39;,&#39;Chang&#39;,&#39;M&#39;,&#39;1976-10-14&#39;,&#39;Mexican&#39;),
+(&#39;Graham&#39;,&#39;Chapman&#39;,&#39;M&#39;,&#39;1941-01-08&#39;,&#39;Japanese&#39;),
+(&#39;Pei-pei&#39;,&#39;Cheng&#39;,&#39;F&#39;,&#39;1946-12-04&#39;,&#39;Mexican&#39;),
+(&#39;Maggie &#39;,&#39;Cheung&#39;,&#39;F&#39;,&#39;1964-09-20&#39;,&#39;American&#39;),
+(&#39;Min-sik&#39;,&#39;Choi&#39;,&#39;M&#39;,&#39;1962-05-30&#39;,&#39;Chinese&#39;),
+(&#39;Yun-fat&#39;,&#39;Chow&#39;,&#39;M&#39;,&#39;1955-05-18&#39;,&#39;American&#39;),
+(&#39;John&#39;,&#39;Cleese&#39;,&#39;M&#39;,&#39;1939-10-27&#39;,&#39;British&#39;),
+(&#39;Paddy&#39;,&#39;Considine&#39;,&#39;M&#39;,&#39;1973-09-05&#39;,&#39;Mexican&#39;),
+(&#39;Abbie&#39;,&#39;Cornish&#39;,&#39;F&#39;,&#39;1982-08-07&#39;,&#39;Swedish&#39;),
+(&#39;Brian&#39;,&#39;Cox&#39;,&#39;M&#39;,&#39;1946-06-01&#39;,&#39;Swedish&#39;),
+(&#39;Scatman&#39;,&#39;Crothers&#39;,&#39;M&#39;,&#39;1910-05-23&#39;,&#39;American&#39;),
+(&#39;Russell&#39;,&#39;Crowe&#39;,&#39;M&#39;,&#39;1964-04-07&#39;,&#39;American&#39;),
+(&#39;Tom&#39;,&#39;Cruise&#39;,&#39;M&#39;,&#39;1962-07-03&#39;,&#39;Swedish&#39;),
+(&#39;Darlan&#39;,&#39;Cunha&#39;,&#39;M&#39;,&#39;1988-07-26&#39;,&#39;American&#39;),
+(&#39;Willem&#39;,&#39;Dafoe&#39;,&#39;M&#39;,&#39;1955-07-22&#39;,&#39;British&#39;),
+(&#39;Paul&#39;,&#39;Dano&#39;,&#39;M&#39;,&#39;1984-06-19&#39;,&#39;Swedish&#39;),
+(&#39;Daniel&#39;,&#39;Day-Lewis&#39;,&#39;M&#39;,&#39;1957-04-29&#39;,&#39;Swedish&#39;),
+(&#39;Robert&#39;,&#39;De Niro&#39;,&#39;M&#39;,&#39;1943-08-17&#39;,&#39;British&#39;),
+(&#39;Marion&#39;,&#39;Brando&#39;,&#39;M&#39;,&#39;1924-04-03&#39;,&#39;American&#39;),
+(null,&#39;Denden&#39;,&#39;M&#39;,&#39;1950-01-23&#39;,&#39;Mexican&#39;),
+(&#39;Leonardo&#39;,&#39;DiCaprio&#39;,&#39;M&#39;,&#39;1974-11-11&#39;,&#39;American&#39;),
+(&#39;Peter&#39;,&#39;Dinklage&#39;,&#39;M&#39;,&#39;1969-06-11&#39;,&#39;British&#39;),
+(&#39;Hiroki&#39;,&#39;Doi&#39;,&#39;M&#39;,&#39;1999-08-10&#39;,&#39;Japanese&#39;),
+(&#39;Kirsten&#39;,&#39;Dunst&#39;,&#39;F&#39;,&#39;1982-04-30&#39;,&#39;Swedish&#39;),
+(&#39;Shelley&#39;,&#39;Duvall&#39;,&#39;F&#39;,&#39;1949-07-07&#39;,&#39;British&#39;),
+(&#39;Ralph&#39;,&#39;Fiennes&#39;,&#39;M&#39;,&#39;1962-12-22&#39;,&#39;British&#39;),
+(&#39;Leandro&#39;,&#39;Firmino&#39;,&#39;M&#39;,&#39;1978-06-23&#39;,&#39;Swedish&#39;),
+(&#39;Carrie&#39;,&#39;Fisher&#39;,&#39;F&#39;,&#39;1956-10-21&#39;,&#39;American&#39;),
+(&#39;Harrison&#39;,&#39;Ford&#39;,&#39;M&#39;,&#39;1942-07-13&#39;,&#39;American&#39;),
+(&#39;Darian&#39;,&#39;Cunha&#39;,&#39;M&#39;,&#39;1988-07-26&#39;,&#39;American&#39;),
+(&#39;Jodie&#39;,&#39;Foster&#39;,&#39;F&#39;,&#39;1962-11-19&#39;,&#39;Chinese&#39;);
+</code></pre><p><img alt="querying data" src="/images/4/4-3/4.png"></p>
+<p>3.Xem tất cả bản ghi trong bảng</p>
+<p>Type the following query in the query tool to view all recording:
+<code>SElECT * FROM fcj_users;</code></p>
+<p>4.Xem tên người dùng và quốc tịch đầy đủ</p>
+<p>Nhập truy vấn sau vào công cụ truy vấn:</p>
+<pre tabindex="0"><code>SELECT first_name || &#39; &#39; || last_name || &#39; from &#39; || nationality AS &#34;Full name&#34; &amp; nationality FROM fcj_users;
+</code></pre><p><img alt="querying data" src="/images/4/4-3/5.png"></p>
+<p>5.Lấy tất cả người dùng từ Thụy Điển hoặc Mỹ và ngày sinh từ 1980 đến 1990. Sắp xếp danh sách đầu ra giảm dần theo date_of_birth</p>
+<p>Nhập truy vấn sau vào công cụ truy vấn:</p>
+<pre tabindex="0"><code>SELECT * FROM fcj_users
+WHERE nationality = &#39;Swedish&#39; OR
+      nationality = &#39;American&#39; AND
+      date_of_birth BETWEEN &#39;1980-01-01&#39; AND &#39;1990-12-31&#39;
+ORDER BY date_of_birth DESC;
+</code></pre><p><img alt="querying data" src="/images/4/4-3/6.png"></p>
+<p>6.Liệt kê top 5 người dùng trẻ tuổi nhất</p>
+<p>Nhập truy vấn sau vào công cụ truy vấn:</p>
+<pre tabindex="0"><code>SELECT * FROM fcj_users
+ORDER BY date_of_birth DESC
+FETCH FIRST 5 ROW ONLY;
+</code></pre><p><img alt="querying data" src="/images/4/4-3/7.png"></p>
+<p>7.Danh sách top 5 người dùng lớn tuổi nhất</p>
+<p>Nhập truy vấn sau vào công cụ truy vấn:</p>
+<pre tabindex="0"><code>SELECT * FROM fcj_users
+ORDER BY date_of_birth ASC
+FETCH FIRST 5 ROW ONLY;
+</code></pre><p><img alt="querying data" src="/images/4/4-3/8.png"></p>
+<p>8.Kiểm tra xem người dùng có thiếu ngày sinh, họ hoặc tên không</p>
+<pre tabindex="0"><code>SELECT *
+FROM fcj_users
+WHERE date_of_birth IS NULL
+OR first_name IS NULL
+OR last_name IS NULL ;
+</code></pre><p><img alt="querying data" src="/images/4/4-3/9.png"></p>
+
 
 
 
@@ -968,136 +1071,6 @@
 
                     
                     
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                     
 
                     
@@ -1239,6 +1212,136 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1274,7 +1377,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1291,8 +1393,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1312,6 +1412,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1349,10 +1452,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/4-connectordspostgresql/4-1-usingpgadmin4/" title="Configure the database client"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/4-connectordspostgresql/4-2-usingpsql/" title="Sử dụng EC2 instance để kết nối với RDS PostgreSQL"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/4-connectordspostgresql/4-2-usingpsql/" title="Import data into PostgreSQl" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/5-helpfulresources/" title="Tài liệu tham khảo" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1362,19 +1465,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696781237"></script>
-    <script src="/js/jquery.sticky.js?1696781237"></script>
-    <script src="/js/featherlight.min.js?1696781237"></script>
-    <script src="/js/highlight.pack.js?1696781237"></script>
+    <script src="/js/clipboard.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710861295"></script>
+    <script src="/js/jquery.sticky.js?1710861295"></script>
+    <script src="/js/featherlight.min.js?1710861295"></script>
+    <script src="/js/highlight.pack.js?1710861295"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696781237"></script>
-    <script src="/js/learn.js?1696781237"></script>
-    <script src="/js/hugo-learn.js?1696781237"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710861295"></script>
+    <script src="/js/learn.js?1710861295"></script>
+    <script src="/js/hugo-learn.js?1710861295"></script>
 
-    <link href="/mermaid/mermaid.css?1696781237" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696781237"></script>
+    <link href="/mermaid/mermaid.css?1710861295" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710861295"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

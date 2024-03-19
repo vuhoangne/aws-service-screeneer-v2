@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Basic DML (Data Manipulation Language) :: AWS RDS PostgreSQL</title>
 
     
-    <link href="/css/nucleus.css?1696781237" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696781237" rel="stylesheet">
-    <link href="/css/hybrid.css?1696781237" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696781237" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696781237" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696781237" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696781237" rel="stylesheet">
-    <link href="/css/theme.css?1696781237" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696781237" rel="stylesheet">
+    <link href="/css/nucleus.css?1710861295" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710861295" rel="stylesheet">
+    <link href="/css/hybrid.css?1710861295" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710861295" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710861295" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710861295" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710861295" rel="stylesheet">
+    <link href="/css/theme.css?1710861295" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710861295" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1696781237" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710861295" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696781237"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710861295"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696781237"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696781237"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710861295"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710861295"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696781237"></script>
+<script type="text/javascript" src="/js/search.js?1710861295"></script>
 
     
   </div>
@@ -307,13 +307,13 @@
  
   
     
-    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create RDS PostgreSQL DB" class="dd-item 
+    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create an RDS PostgreSQL DB" class="dd-item 
         
         
         
         ">
       <a href="/2-preparation/2-7-createrdsdb/">
-           <b> 2.7. </b> Create RDS PostgreSQL DB
+           <b> 2.7. </b> Create an RDS PostgreSQL DB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4" class="dd-item 
+    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4 tool" class="dd-item 
         
         
         
         ">
       <a href="/3-startwithpostgresql/3-1-pgadmin/">
-           <b> 3.1. </b> pgAdmin4
+           <b> 3.1. </b> pgAdmin4 tool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -928,21 +928,28 @@
 
 
 
-	<p>This chapter will talk about <strong>queries and basic DML</strong>.</p>
+	<p>This chapter will talk about queries and basic DML.
 
 <div class="notices note" ><p>This chapter assumes you have completed the <strong>Tables and Datatypes</strong> chapter. If you haven&rsquo;t, please complete the Tables and Datatypes module before proceeding.</p>
 </div>
-
+</p>
 <h4 id="insert-data-into-our-first-table">Insert data into our first table</h4>
-<p>1.In your pgAdmin tool, right click on <strong>first_table</strong> under your <strong>first_schema</strong> inside your <strong>first_database</strong>. Choose <strong>Scripts</strong>, then click <strong>INSERT Script</strong></p>
-<p><img src="/images/2/2-4/16.png" alt="insert data"></p>
-<p>This will create a boilerplate insert statement for our table that we can edit.\</p>
-<p>2.Highlight the ? placeholder and replace it with <code>'my first row'</code>. Don&rsquo;t forget to use the <code>'</code> single-quote mark to surround your text.
-<img src="/images/2/2-4/17.png" alt="insert data"></p>
-<p>3.Click on the Play icon to execute this command.</p>
-<p>This will run your command and insert your first row.
-<img src="/images/2/2-4/18.png" alt="insert data"></p>
-<p>
+<ol>
+<li>
+<p>In your pgAdmin tool, right click on <code>first_table</code> under your <code>first_schema</code> inside your <code>first_database</code>. Choose Scripts, then SELECT Script
+<img alt="insert data" src="/images/2/2-4/insert_data.png">
+This will create a boilerplate insert statement for our table that we can edit.
+<img alt="insert data" src="/images/2/2-4/insert_data_1.png"></p>
+</li>
+<li>
+<p>Highlight the ? placeholder and replace it with <code>'my first row'</code>. Don&rsquo;t forget to use the <code>'</code> single-quote mark to surround your text.
+<img alt="insert data" src="/images/2/2-4/insert_data_2.png"></p>
+</li>
+<li>
+<p>Click on the Play icon to execute this command.
+This will run your command and insert your first row.
+<img alt="insert data" src="/images/2/2-4/insert_data_2.png">
+
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
@@ -969,47 +976,66 @@
     	</span>
     </div>
     <div class="expand-content" style="display: none;">
-        <p>By default, pgAdmin is set with AutoCommit on, so, yes, this new row should be committed. You can see/change the AutoCommit mode by clicking on the icon next to the Play icon in the pgAdmin Query Editor:</p>
+        <p>By default, pgAdmin is set with AutoCommit on, so, yes, this new row should be committed. You can see/change the AutoCommit mode by clicking on the icon next to the Play icon in the pgAdmin Query Editor:
+<img alt="insert data" src="/images/2/2-4/insert_data_3.png"></p>
 
     </div>
 </div></p>
+</li>
+</ol>
 <h4 id="query-our-first-table">Query our first table</h4>
-<p>1.In your pgAdmin tool, right click on <strong>first_table</strong> under your <strong>first_schema</strong> inside your <strong>first_database</strong>. Choose Scripts, then click <strong>SELECT Script</strong>
-<img src="/images/2/2-4/19.png" alt="select"></p>
-<p>2.Click on the Play icon to execute this command.</p>
-<p><img src="/images/2/2-4/20.png" alt="select"></p>
-<p>This will run your command and you should see your first row.</p>
-<p><img src="/images/2/2-4/21.png" alt="select"></p>
+<ol>
+<li>
+<p>In your pgAdmin tool, right click on <code>first_table</code> under your <code>first_schema</code> inside your <code>first_database</code>. Choose Scripts, then SELECT Script
+<img alt="select" src="/images/2/2-4/select.png"></p>
+</li>
+<li>
+<p>Click on the Play icon to execute this command.
+<img alt="select" src="/images/2/2-4/select_1.png">
+This will run your command and you should see your first row.
+<img alt="select" src="/images/2/2-4/select_2.png"></p>
+</li>
+</ol>
 <h4 id="create-table-second-table-if-not-exists">Create table second table if not exists</h4>
-<p>1.Using one of the open query editors, paste in the following create command and then click the Play icon to execute it:</p>
-<pre tabindex="0"><code>create table if not exists first_schema.second_table(
-   col_pk serial,
-   col_money numeric(12,2),
-   col_short_str varchar(100),
-   col_datetime timestamp(0) without time zone
- );
-</code></pre><p><img src="/images/2/2-4/22.png" alt="add table"></p>
+<ol>
+<li>Using one of the open query editors, paste in the following create command and then click the Play icon to execute it:
+<pre tabindex="0"><code>  create table if not exists first_schema.second_table(
+      col_pk serial,
+      col_money numeric(12,2),
+      col_short_str varchar(100),
+      col_datetime timestamp(0) without time zone
+    );
+</code></pre><img alt="add table" src="/images/2/2-4/add_table.png"></li>
+</ol>
 <h4 id="insert-into-our-second-table">Insert into our second table</h4>
-<p>1.Using one of the open query editors, paste in the following insert command and then click the Play icon to execute it:</p>
+<ol>
+<li>Using one of the open query editors, paste in the following insert command and then click the Play icon to execute it:
 <pre tabindex="0"><code>INSERT INTO first_schema.second_table(
- col_money, col_short_str, col_datetime)
- VALUES (40.25, &#39;short string&#39;, TIMESTAMP &#39;2004-10-19 10:23:54&#39;) 
+  col_money, col_short_str, col_datetime)
+  VALUES (40.25, &#39;short string&#39;, TIMESTAMP &#39;2004-10-19 10:23:54&#39;) 
 returning col_pk;
-</code></pre><p><img src="/images/2/2-4/23.png" alt="insert data to table"></p>
+</code></pre><img alt="insert data to table" src="/images/2/2-4/insert_data_to_table2.png"></li>
+</ol>
 <p>Notice that because we specified <code>returning col_pk</code>, we see the auto-generated unique value of col_pk in the Data Output section. Remember that when we created second_table that we specified that col_pk used the <code>SERIAL</code> datatype (which is like the AUTO_INCREMENT datatype in other database engines).</p>
 <h4 id="experimenting-with-datatype-conversions">Experimenting with Datatype conversions</h4>
-<p>1.In one of the open query editors, paste the following select command and click the Play icon to execute it:</p>
+<ol>
+<li>
+<p>In one of the open query editors, paste the following select command and click the Play icon to execute it:</p>
 <pre tabindex="0"><code>SELECT &#39;40.25&#39; col1, 40.25 col2;
-</code></pre><p><img src="/images/2/2-4/24.png" alt="datatype"></p>
-<p>Notice in the Data Output section that <code>col1</code> is a text datatype while <code>col2</code> is a numeric datatype.</p>
+</code></pre><p><img alt="datatype" src="/images/2/2-4/datatype.png">
+Notice in the Data Output section that <code>col1</code> is a text datatype while <code>col2</code> is a numeric datatype.
 
 <div class="notices note" ><p>Unlike certain other databases (specifically Oracle), you do not need to have a FROM clause in your SELECT statement. So if you are in the habit of writing <code>SELECT 'something' FROM dual</code>; in Oracle, you can leave the <code>FROM dual</code> off in PostgreSQL. There is no <code>dual</code> table in PostgreSQL.</p>
 </div>
-
-<p>2.Now run this query:</p>
+</p>
+</li>
+<li>
+<p>Now run this query:</p>
 <pre tabindex="0"><code>SELECT &#39;40.25&#39; col1, 40.25 col2, &#39;40.25&#39;::numeric col3, numeric &#39;40.25&#39; col4, cast(&#39;40.25&#39; as numeric) col5;
-</code></pre><p><img src="/images/2/2-4/25.png" alt="datatype"></p>
-<p>Notice in the Data Output section that <code>col3</code>, <code>col4</code>, and <code>col5</code> are all examples of text datatypes that have been converted to numeric datatypes. These 3 columns demonstrate 3 ways that you can do datatype conversion in PostgreSQL SQL statements.</p>
+</code></pre><p><img alt="datatype" src="/images/2/2-4/datatype_1.png"></p>
+</li>
+</ol>
+<p>Notice in the Data Output section that <code>col3</code>, <code>col4</code>, and `col</p>
 
 
 
@@ -1452,19 +1478,19 @@ returning col_pk;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696781237"></script>
-    <script src="/js/jquery.sticky.js?1696781237"></script>
-    <script src="/js/featherlight.min.js?1696781237"></script>
-    <script src="/js/highlight.pack.js?1696781237"></script>
+    <script src="/js/clipboard.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710861295"></script>
+    <script src="/js/jquery.sticky.js?1710861295"></script>
+    <script src="/js/featherlight.min.js?1710861295"></script>
+    <script src="/js/highlight.pack.js?1710861295"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696781237"></script>
-    <script src="/js/learn.js?1696781237"></script>
-    <script src="/js/hugo-learn.js?1696781237"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710861295"></script>
+    <script src="/js/learn.js?1710861295"></script>
+    <script src="/js/hugo-learn.js?1710861295"></script>
 
-    <link href="/mermaid/mermaid.css?1696781237" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696781237"></script>
+    <link href="/mermaid/mermaid.css?1710861295" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710861295"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

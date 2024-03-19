@@ -1,18 +1,21 @@
 ---
-title : "AWS RDS PostgreSQL"
+title : "Các bước chuẩn bị"
 date :  "`r Sys.Date()`" 
-weight : 1 
+weight : 2
 chapter : false
+pre : " <b> 2. </b> "
 ---
-# Let start with AWS RDS PostgreSQL
 
-### Overall
- In this lab, you'll learn the basics and practice of Amazon RDS PostgreSQL 
 
-### Content
- 1. [Introduction ](1-introduce/)
- 2. [Start with PostgreSQL](2-startwithpostgresql/)
- 3. [Create RDS PostgreSQL Database Instance](3-Createrdspostgresql/)
- 4. [Connect to pgAdmin4](4-Connectopgadmin4/)
- 5. [Helpful Resources](5-Helpfulresources/)
- 6. [Clean up resources](6-cleanup/)
+#### Tổng quan
+- Trong phần này, chúng tôi sẽ chuẩn bị tất cả tài nguyên cho các bài thực hành về RDS PostgreSQL.
+
+#### Nội dung
+ 1. [Tạo VPC](2-1-createvpc/)
+ 2. [Tạo EC2 Security Group](2-2-createec2sg/)
+ 3. [Tạo RDS Security Group ](2-3-createrdssg/)
+ 4. [Tạo DB Subnet Group](2-4-createdbsubnetgroup/)
+ 5. [Tạo EC2 AppServer](2-5-createec2appsv/)
+ 6. [Tạo EC2 bastion host](2-6-createec2bastionhost/)
+ 7. [Tạo RDS PostgreSQl](2-7-createrdsdb/)
+Tạo

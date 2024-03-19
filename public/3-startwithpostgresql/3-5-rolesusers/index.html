@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Roles and Users :: AWS RDS PostgreSQL</title>
 
     
-    <link href="/css/nucleus.css?1696781237" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696781237" rel="stylesheet">
-    <link href="/css/hybrid.css?1696781237" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696781237" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696781237" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696781237" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696781237" rel="stylesheet">
-    <link href="/css/theme.css?1696781237" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696781237" rel="stylesheet">
+    <link href="/css/nucleus.css?1710861295" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710861295" rel="stylesheet">
+    <link href="/css/hybrid.css?1710861295" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710861295" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710861295" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710861295" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710861295" rel="stylesheet">
+    <link href="/css/theme.css?1710861295" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710861295" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1696781237" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710861295" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696781237"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710861295"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696781237"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696781237"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710861295"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710861295"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696781237"></script>
+<script type="text/javascript" src="/js/search.js?1710861295"></script>
 
     
   </div>
@@ -307,13 +307,13 @@
  
   
     
-    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create RDS PostgreSQL DB" class="dd-item 
+    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create an RDS PostgreSQL DB" class="dd-item 
         
         
         
         ">
       <a href="/2-preparation/2-7-createrdsdb/">
-           <b> 2.7. </b> Create RDS PostgreSQL DB
+           <b> 2.7. </b> Create an RDS PostgreSQL DB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4" class="dd-item 
+    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4 tool" class="dd-item 
         
         
         
         ">
       <a href="/3-startwithpostgresql/3-1-pgadmin/">
-           <b> 3.1. </b> pgAdmin4
+           <b> 3.1. </b> pgAdmin4 tool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -939,55 +939,93 @@
 </div>
 
 <h4 id="exploring-existing-roles">Exploring Existing Roles</h4>
-<p>In pgAdmin, expand the <strong>Login/Group Roles</strong> item under your PostgreSQL server.</p>
-<p><img src="/images/2/2-5/26.png" alt="role"></p>
+<p>In pgAdmin, expand the <strong>Login/Group Roles</strong> item under your PostgreSQL server.
+<img alt="role" src="/images/2/2-5/26.png"></p>
 <p>You will see the existing and <a href="https://www.postgresql.org/docs/11/default-roles.html">default roles</a>  defined in this PostgreSQL cluster. Notice that there are 2 types of icons that pgAdmin uses for roles. If the role has <strong>LOIGN</strong> privileges, then it is drawn as a user (such as rdsadmin and masteruser). Otherwise, it is displayed with a group icon.\</p>
 <p>You can also retrieve this same information by running the following sql query:</p>
 <p><code> SELECT rolname FROM pg_roles;</code></p>
-<p><img src="/images/2/2-5/27.png" alt="role"></p>
+<p><img alt="role" src="/images/2/2-5/27.png"></p>
 <h4 id="create-a-new-role">Create a new Role</h4>
-<p>1.Right-click on <strong>Login/Group Roles</strong>, then choose <strong>Create</strong>, then choose <strong>Login/Group role</strong>:</p>
-<p><img src="/images/2/2-5/28.png" alt="role"></p>
-<p>2.Name the role <code>first_role</code>.
-<img src="/images/2/2-5/28.png" alt="role"></p>
-<p>3.Browse through the other tabs of the Create role dialog, but don&rsquo;t change anything. End up on the SQL tab. Then click Save.
-<img src="/images/2/2-5/30.png" alt="role"></p>
-<p>4.Right-click on <strong>first_database</strong> and choose <strong>Query Tool</strong> icon.
-<img src="/images/2/2-5/31.png" alt="role">
-5.Paste and run the following SQL to grant some <a href="https://www.postgresql.org/docs/11/ddl-priv.html">privileges</a>  to your new role.</p>
+<ol>
+<li>
+<p>Right-click on <strong>Login/Group Roles</strong>, then choose <strong>Create</strong>, then choose <strong>Login/Group role</strong>:
+<img alt="role" src="/images/2/2-5/28.png"></p>
+</li>
+<li>
+<p>Name the role <code>first_role</code>.
+<img alt="role" src="/images/2/2-5/28.png"></p>
+</li>
+<li>
+<p>Browse through the other tabs of the Create role dialog, but don&rsquo;t change anything. End up on the SQL tab. Then click Save.
+<img alt="role" src="/images/2/2-5/30.png"></p>
+</li>
+<li>
+<p>Right-click on <strong>first_database</strong> and choose <strong>Query Tool</strong> icon.
+<img alt="role" src="/images/2/2-5/31.png"></p>
+</li>
+<li>
+<p>Paste and run the following SQL to grant some <a href="https://www.postgresql.org/docs/11/ddl-priv.html">privileges</a>  to your new role.</p>
 <pre tabindex="0"><code>GRANT USAGE ON SCHEMA first_schema TO first_role;
 GRANT SELECT ON first_schema.first_table TO first_role;
-</code></pre><p><img src="/images/2/2-5/32.png" alt="role"></p>
+</code></pre><p><img alt="role" src="/images/2/2-5/32.png">
 
 <div class="notices note" ><p>we have granted the role both the ability to SELECT from the table, and also the ability to use the schema that contains the table.</p>
 </div>
-
+</p>
+</li>
+</ol>
 <h4 id="create-a-new-user">Create a new User</h4>
-<p>1.Right-click on <strong>Login/Group Roles</strong>, then choose <strong>Create</strong>, then choose <strong>Login/Group role</strong>:
-<img src="/images/2/2-5/33.png" alt="role"></p>
-<p>2.Name the role <code>first_user</code>.</p>
-<p><img src="/images/2/2-5/34.png" alt="role"></p>
-<p>3.Click on the <strong>Definition</strong> tab. Then enter a Password you will remember.</p>
-<p><img src="/images/2/2-5/35.png" alt="role"></p>
-<p>4.Click on the <strong>Privileges</strong> tab. Then set <strong>Can login?</strong> to <strong>Yes</strong></p>
-<p><img src="/images/2/2-5/36.png" alt="role"></p>
-<p>5.Click on the <strong>Membership</strong> tab. Then click in the Roles field and pick <code>first_role</code></p>
-<p><img src="/images/2/2-5/37.png" alt="role"></p>
-<p>6.Finally, click on the <strong>SQL</strong> tab to see what the <strong>SQL</strong> looks like. Then <strong>Save</strong></p>
-<p><img src="/images/2/2-5/38.png" alt="role"></p>
+<ol>
+<li>
+<p>Right-click on <strong>Login/Group Roles</strong>, then choose <strong>Create</strong>, then choose <strong>Login/Group role</strong>:
+<img alt="role" src="/images/2/2-5/33.png"></p>
+</li>
+<li>
+<p>Name the role <code>first_user</code>.
+<img alt="role" src="/images/2/2-5/34.png"></p>
+</li>
+<li>
+<p>Click on the <strong>Definition</strong> tab. Then enter a Password you will remember
+<img alt="role" src="/images/2/2-5/35.png"></p>
+</li>
+<li>
+<p>Click on the <strong>Privileges</strong> tab. Then set <strong>Can login?</strong> to <strong>Yes</strong>
+<img alt="role" src="/images/2/2-5/36.png"></p>
+</li>
+<li>
+<p>Click on the <strong>Membership</strong> tab. Then click in the Roles field and pick <code>first_role</code>
+<img alt="role" src="/images/2/2-5/37.png"></p>
+</li>
+<li>
+<p>Finally, click on the <strong>SQL</strong> tab to see what the <strong>SQL</strong> looks like. Then <strong>Save</strong>
+<img alt="role" src="/images/2/2-5/38.png"></p>
+</li>
+</ol>
 <p>Now, right-click on the <strong>Servers</strong> node and choose <strong>Create</strong>, then click <strong>Server</strong></p>
-<p>7.Name the new connection <code>first_user_connection</code><br>
-8.Click on the <strong>Connection</strong> tab. Enter the RDS endpoint for the hostname (see notes below if you need help finding it). Enter <code>first_user</code> for the Username. Enter your <strong>Password</strong> you just defined for the new user. Then click <strong>Save</strong>.
-<img src="/images/2/2-5/39.png" alt="role"></p>
-<p>9.Expand the <strong>first_user_connection</strong> node, then expand <strong>Databases</strong>. Right-click on <strong>first_database</strong>, then choose <strong>Query Tool</strong> to open up a session as first_user.
-<img src="/images/2/2-5/40.png" alt="role"></p>
-<p>10.Paste and run this SQL to see if our <strong>first_role</strong> grants work:</p>
-<p><code>select * from first_schema.first_table;</code>
-<img src="/images/2/2-5/41.png" alt="role"></p>
-<p>11.Paste and run this SQL to test a table that we have not granted to <strong>first_role</strong>:</p>
-<p><code>select * from first_schema.second_table;</code>
-<img src="/images/2/2-5/42.png" alt="role"></p>
-
+<ol start="7">
+<li>
+<p>Name the new connection <code>first_user_connection</code>\</p>
+</li>
+<li>
+<p>Click on the <strong>Connection</strong> tab. Enter the RDS endpoint for the hostname (see notes below if you need help finding it). Enter <code>first_user</code> for the Username. Enter your <strong>Password</strong> you just defined for the new user. Then click <strong>Save</strong>.
+<img alt="role" src="/images/2/2-5/39.png"></p>
+</li>
+<li>
+<p>Expand the <strong>first_user_connection</strong> node, then expand <strong>Databases</strong>. Right-click on <strong>first_database</strong>, then choose <strong>Query Tool</strong> to open up a session as first_user.
+<img alt="role" src="/images/2/2-5/40.png"></p>
+</li>
+<li>
+<p>Paste and run this SQL to see if our <strong>first_role</strong> grants work:
+<code>select * from first_schema.first_table;</code>
+<img alt="role" src="/images/2/2-5/41.png"></p>
+</li>
+<li>
+<p>Paste and run this SQL to test a table that we have not granted to <strong>first_role</strong>:
+<code>select * from first_schema.second_table;</code>
+<img alt="role" src="/images/2/2-5/42.png"></p>
+</li>
+</ol>
+<p>
 <div class="notices tip" ><p>Read more about <a href="https://aws.amazon.com/blogs/database/managing-postgresql-users-and-roles/">best practices for PostgreSQL User/Role management</a></p>
 </div>
 
@@ -1009,7 +1047,7 @@ CREATE ROLE new_dba_user WITH PASSWORD &#39;thepassword&#39; CREATEDB CREATEROLE
 GRANT rds_superuser TO new_dba_user;
 </code></pre>
     </div>
-</div>
+</div></p>
 
 
 
@@ -1452,19 +1490,19 @@ GRANT rds_superuser TO new_dba_user;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696781237"></script>
-    <script src="/js/jquery.sticky.js?1696781237"></script>
-    <script src="/js/featherlight.min.js?1696781237"></script>
-    <script src="/js/highlight.pack.js?1696781237"></script>
+    <script src="/js/clipboard.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710861295"></script>
+    <script src="/js/jquery.sticky.js?1710861295"></script>
+    <script src="/js/featherlight.min.js?1710861295"></script>
+    <script src="/js/highlight.pack.js?1710861295"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696781237"></script>
-    <script src="/js/learn.js?1696781237"></script>
-    <script src="/js/hugo-learn.js?1696781237"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710861295"></script>
+    <script src="/js/learn.js?1710861295"></script>
+    <script src="/js/hugo-learn.js?1710861295"></script>
 
-    <link href="/mermaid/mermaid.css?1696781237" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696781237"></script>
+    <link href="/mermaid/mermaid.css?1710861295" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710861295"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

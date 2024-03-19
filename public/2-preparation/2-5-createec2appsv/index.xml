@@ -5,6 +5,7 @@
     <link>/2-preparation/2-5-createec2appsv/</link>
     <description>Recent content in Create EC2 instance for app server on AWS RDS PostgreSQL</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="/2-preparation/2-5-createec2appsv/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="/2-preparation/2-5-createec2appsv/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

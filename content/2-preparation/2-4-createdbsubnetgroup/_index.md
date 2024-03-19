@@ -12,17 +12,17 @@ pre : " <b> 2.4. </b> "
 1. Open the Amazon RDS [console](https://console.aws.amazon.com/rds/)
 2. In the navigation pane, choose **Subnet groups** and click on **Create DB Subnet Group**.
 
-![Create EC2 SG](/images/preparation/4/1.png)
+    ![Create EC2 SG](/images/preparation/4/1.png)
 
 3. For **Name** and **Description**, type in a name and description for your DB subnet group.
 4. For **VPC**, select the VPC in which you want to create your DB subnet group.
 
-![Create EC2 SG](/images/preparation/4/2.png)
+    ![Create EC2 SG](/images/preparation/4/2.png)
 
 5. Select the subnets that you want to include in your DB subnet group. Make sure to select subnets in at least two different Availability Zones (AZs).
 6. Click **Create**.
 
-![Create EC2 SG](/images/preparation/4/3.png)
+    ![Create EC2 SG](/images/preparation/4/3.png)
 
 Your DB subnet group will be created and will be displayed in the list of DB subnet groups.
 

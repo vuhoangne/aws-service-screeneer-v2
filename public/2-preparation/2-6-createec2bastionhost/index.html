@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create bastion host EC2 instance  :: AWS RDS PostgreSQL</title>
 
     
-    <link href="/css/nucleus.css?1696781237" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696781237" rel="stylesheet">
-    <link href="/css/hybrid.css?1696781237" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696781237" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696781237" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696781237" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696781237" rel="stylesheet">
-    <link href="/css/theme.css?1696781237" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696781237" rel="stylesheet">
+    <link href="/css/nucleus.css?1710861295" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710861295" rel="stylesheet">
+    <link href="/css/hybrid.css?1710861295" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710861295" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710861295" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710861295" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710861295" rel="stylesheet">
+    <link href="/css/theme.css?1710861295" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710861295" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1696781237" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710861295" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696781237"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710861295"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696781237"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696781237"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710861295"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710861295"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696781237"></script>
+<script type="text/javascript" src="/js/search.js?1710861295"></script>
 
     
   </div>
@@ -307,13 +307,13 @@
  
   
     
-    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create RDS PostgreSQL DB" class="dd-item 
+    <li data-nav-id="/2-preparation/2-7-createrdsdb/" title="Create an RDS PostgreSQL DB" class="dd-item 
         
         
         
         ">
       <a href="/2-preparation/2-7-createrdsdb/">
-           <b> 2.7. </b> Create RDS PostgreSQL DB
+           <b> 2.7. </b> Create an RDS PostgreSQL DB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4" class="dd-item 
+    <li data-nav-id="/3-startwithpostgresql/3-1-pgadmin/" title="pgAdmin4 tool" class="dd-item 
         
         
         
         ">
       <a href="/3-startwithpostgresql/3-1-pgadmin/">
-           <b> 3.1. </b> pgAdmin4
+           <b> 3.1. </b> pgAdmin4 tool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -934,37 +934,48 @@
 
 <h4 id="to-create-an-ec2-instance-for-bastion-host--follow-these-steps">To create an EC2 instance for bastion host , follow these steps:</h4>
 <ol>
-<li>Open the <strong>Amazon EC2</strong> <a href="https://console.aws.amazon.com/ec2/">console</a>.</li>
-<li>Click <strong>Launch Instance</strong>.</li>
+<li>
+<p>Open the <strong>Amazon EC2</strong> <a href="https://console.aws.amazon.com/ec2/">console</a>.</p>
+</li>
+<li>
+<p>Click <strong>Launch Instance</strong>.</p>
+<p><img alt="Create bastion host" src="/images/preparation/ec2/1.png"></p>
+</li>
+<li>
+<p><strong>Name</strong> for EC2 bastion host</p>
+<p><img alt="Create bastion host" src="/images/preparation/bastionhost/ec2bastion.png"></p>
+</li>
+<li>
+<p>Choose an <strong>AMI</strong>. For an app server, you can choose a <strong>Linux AMI</strong>, such as <strong>Amazon Linux 2</strong>.</p>
+<p><img alt="Create bastion host" src="/images/preparation/bastionhost/ec2bastion1.png"></p>
+</li>
+<li>
+<p>Choose an <strong>instance type</strong>. The instance type that you choose will depend on the requirements of your app server. For example, if you are running a high-traffic website, you will need a larger instance type with more CPU and memory.</p>
+<p><img alt="Create bastion host" src="/images/preparation/bastionhost/ec2bastion2.png"></p>
+</li>
+<li>
+<p>For <strong>Key Pair</strong>,choose your keypair you have created or click <strong>Create new key pair</strong></p>
+<p><img alt="Create bastion host" src="/images/preparation/bastionhost/ec2bastion3.png"></p>
+</li>
 </ol>
-<p><img src="/images/preparation/ec2/1.png" alt="Create bastion host">
-3. <strong>Name</strong> for EC2 bastion host</p>
-<p><img src="/images/preparation/bastionhost/ec2bastion.png" alt="Create bastion host">
-3. Choose an <strong>AMI</strong>. For an app server, you can choose a <strong>Linux AMI</strong>, such as <strong>Amazon Linux 2</strong>.</p>
-<p><img src="/images/preparation/bastionhost/ec2bastion1.png" alt="Create bastion host"></p>
-<ol start="4">
-<li>Choose an <strong>instance type</strong>. The instance type that you choose will depend on the requirements of your app server. For example, if you are running a high-traffic website, you will need a larger instance type with more CPU and memory.</li>
-</ol>
-<p><img src="/images/preparation/bastionhost/ec2bastion2.png" alt="Create bastion host"></p>
-<ol start="5">
-<li>For <strong>Key Pair</strong>,choose your keypair you have created or click <strong>Create new key pair</strong></li>
-</ol>
-<p><img src="/images/preparation/bastionhost/ec2bastion3.png" alt="Create bastion host"></p>
 <p>Configure the instance details. This includes things like the number of instances to launch, the network configuration, and the storage configuration.</p>
 <ol start="7">
-<li>For <strong>Network settings</strong></li>
-</ol>
+<li>For <strong>Network settings</strong>
 <ul>
 <li>Choose <strong>VPC</strong> which contains EC2 app server</li>
 <li>Choose <strong>Subnet</strong></li>
 <li><strong>Enable</strong> Auto-assign public IP</li>
 <li>Add a <strong>security group</strong> for EC2 app server that you have created easier step . <em>A security group is a firewall that controls incoming and outgoing traffic to your instance.</em></li>
 </ul>
-<p><img src="/images/preparation/bastionhost/ec2bastion4.png" alt="Create bastion host"></p>
-<ol start="8">
-<li><strong>Review</strong> and <strong>launch</strong> the instance</li>
+</li>
 </ol>
-<p><img src="/images/preparation/bastionhost/ec2bastion5.png" alt="Create bastion host"></p>
+<p><img alt="Create bastion host" src="/images/preparation/bastionhost/ec2bastion4.png"></p>
+<ol start="8">
+<li>
+<p><strong>Review</strong> and <strong>launch</strong> the instance</p>
+<p><img alt="Create bastion host" src="/images/preparation/bastionhost/ec2bastion5.png"></p>
+</li>
+</ol>
 
 
 
@@ -1397,7 +1408,7 @@
 			<a class="nav nav-prev" href="/2-preparation/2-5-createec2appsv/" title="Create EC2 instance for app server"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-preparation/2-7-createrdsdb/" title="Create RDS PostgreSQL DB" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-preparation/2-7-createrdsdb/" title="Create an RDS PostgreSQL DB" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1407,19 +1418,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696781237"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696781237"></script>
-    <script src="/js/jquery.sticky.js?1696781237"></script>
-    <script src="/js/featherlight.min.js?1696781237"></script>
-    <script src="/js/highlight.pack.js?1696781237"></script>
+    <script src="/js/clipboard.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710861295"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710861295"></script>
+    <script src="/js/jquery.sticky.js?1710861295"></script>
+    <script src="/js/featherlight.min.js?1710861295"></script>
+    <script src="/js/highlight.pack.js?1710861295"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696781237"></script>
-    <script src="/js/learn.js?1696781237"></script>
-    <script src="/js/hugo-learn.js?1696781237"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710861295"></script>
+    <script src="/js/learn.js?1710861295"></script>
+    <script src="/js/hugo-learn.js?1710861295"></script>
 
-    <link href="/mermaid/mermaid.css?1696781237" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696781237"></script>
+    <link href="/mermaid/mermaid.css?1710861295" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710861295"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

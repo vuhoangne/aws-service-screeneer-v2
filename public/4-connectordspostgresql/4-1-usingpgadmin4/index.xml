@@ -5,6 +5,7 @@
     <link>/4-connectordspostgresql/4-1-usingpgadmin4/</link>
     <description>Recent content in Using pgAdmin4 to connect to RDS PostgreSQL on AWS RDS PostgreSQL</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="/4-connectordspostgresql/4-1-usingpgadmin4/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="/4-connectordspostgresql/4-1-usingpgadmin4/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
