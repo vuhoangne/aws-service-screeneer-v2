@@ -1,25 +1,77 @@
 ---
-title : "Giới thiệu"
-date :  "`r Sys.Date()`" 
+title : "Introduction"
+date: "2024-01-01" 
 weight : 1 
 chapter : false
 pre : " <b> 1. </b> "
 ---
+This workshop will guide you through using **AWS Service Screener v2**, an open-source tool that analyzes your AWS environment and provides recommendations based on AWS Well-Architected Framework best practices. You'll learn to install, configure, and run the tool to identify optimization opportunities across Security, Reliability, Operational Excellence, Performance Efficiency, and Cost Optimization.
 
-- [PostgreSQL](https://aws.amazon.com/rds/postgresql/what-is-postgresql/) đã trở thành cơ sở dữ liệu quan hệ [mã nguồn mở](https://aws.amazon.com/products/databases/open-source-databases/) dành cho nhiều nhà phát triển doanh nghiệp và người khởi nghiệp, hỗ trợ các ứng dụng di động và kinh doanh hàng đầu. Amazon RDS giúp việc thiết lập, vận hành và mở rộng quy mô triển khai PostgreSQL trên đám mây trở nên dễ dàng hơn. Với Amazon RDS, bạn có thể triển khai PostgreSQL trong vài phút với dung lượng phần cứng có thể thay đổi và tiết kiệm chi phí. Amazon RDS quản lý các tác vụ quản trị phức tạp và tốn thời gian như cài đặt và nâng cấp phần mềm PostgreSQL, quản lý lưu trữ, sao chép để có tính sẵn sàng cao và thông lượng đọc cũng như sao lưu để khắc phục thảm họa.
+#### Learning Objectives
+By the end of this workshop, you will be able to:
+- Install and configure AWS Service Screener v2
+- Run comprehensive security and best practice assessments
+- Interpret and analyze the generated reports
+- Implement recommendations to improve your AWS environment
+- Integrate findings with AWS Well-Architected Tool
 
-- Amazon RDS PostgreSQL cung cấp cho bạn quyền truy cập vào các công cụ của cơ sở dữ liệu PostgreSQL. Điều này có nghĩa là code, ứng dụng và công cụ bạn hiện đang sử dụng với cơ sở dữ liệu hiện tại của mình có thể được sử dụng với Amazon RDS. Amazon RDS PostgreSQL hiện hỗ trợ các phiên bản PostgreSQL 9.6, 10, 11, 12, 13, 14 và 15. Với [Trusted Language Extensions (TLE) for PostgreSQL](https://aws.amazon.com/rds/postgresql/features/), bạn có thể xây dựng các tiện ích mở rộng hiệu suất cao và chạy chúng một cách an toàn trên Amazon RDS bằng các ngôn ngữ phổ biến đáng tin cậy mà không cần AWS xác thực code.
+#### Prerequisites
+- AWS Account with appropriate permissions
+- Basic understanding of AWS services
+- Familiarity with AWS CLI and CloudShell
 
-    ![intro](/images/1/2.png)
+#### Key Features
+##### Automated Assessment
+- Scans your AWS environment automatically
+- Analyzes resource configurations and usage patterns
+- Compares against AWS Well-Architected Framework principles
 
-    
-- Những lợi ích bạn sẽ nhận được khi sử dụng AWS RDS PostgreSQL
-    - Triển khai quản lí dễ dàng hơn
-    - Lưu trữ nhanh, có thể dự báo
-    - Sao lưu và phục hồi
-    - Tính sẵn sàng cao và bản sao chỉ có quyền đọc
-    - Giám sát và đo lường
-    - Cách ly và bảo mật
+##### Comprehensive Reporting
+- Detailed findings with prioritized recommendations
+- Cost impact analysis for each recommendation
+- Implementation guidance and next steps
 
+##### Multi-Account Support
+- Can assess multiple AWS accounts
+- Provides consolidated reporting across your organization
+- Supports AWS Organizations integration
 
+#### Assessment Areas
 
+The tool typically evaluates:
+
+1. Cost Optimization
+   - Unused or underutilized EC2 instances
+   - Unattached EBS volumes
+   - Idle load balancers
+   - Reserved Instance opportunities
+
+2. Security
+   - IAM policy analysis
+   - Security group configurations
+   - Encryption settings
+   - Public access configurations
+
+3. Performance
+   - Instance sizing recommendations
+   - Storage optimization
+   - Network configuration improvements
+
+4. Reliability
+   - Multi-AZ deployments
+   - Backup configurations
+   - Auto Scaling settings
+
+#### How to Access
+
+AWS Service Screener is typically available through:
+- AWS Support (for customers with Business or Enterprise support)
+- AWS Professional Services engagements
+- AWS Partner assessments
+
+#### Benefits
+
+- **Proactive optimization** - Identify issues before they impact your workloads
+- **Cost savings** - Discover immediate cost reduction opportunities
+- **Risk mitigation** - Address security and compliance gaps
+- **Best practices alignment** - Ensure your architecture follows AWS recommendations

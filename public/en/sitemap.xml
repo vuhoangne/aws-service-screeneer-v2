@@ -2,316 +2,128 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>//localhost:61255/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/"
+                href="//localhost:61255/vi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="//localhost:61255/"
                 />
   </url><url>
-    <loc>/2-preparation/2-1-createvpc/</loc>
+    <loc>//localhost:61255/1-introduce/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparation/2-1-createvpc/"
+                href="//localhost:61255/vi/1-introduce/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparation/2-1-createvpc/"
+                href="//localhost:61255/1-introduce/"
                 />
   </url><url>
-    <loc>/1-introduce/</loc>
+    <loc>//localhost:61255/2-preparation/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-introduce/"
+                href="//localhost:61255/vi/2-preparation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-introduce/"
+                href="//localhost:61255/2-preparation/"
                 />
   </url><url>
-    <loc>/3-startwithpostgresql/3-1-pgadmin/</loc>
+    <loc>//localhost:61255/3-installationandsetup/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-startwithpostgresql/3-1-pgadmin/"
+                href="//localhost:61255/vi/3-installationandsetup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-startwithpostgresql/3-1-pgadmin/"
+                href="//localhost:61255/3-installationandsetup/"
                 />
   </url><url>
-    <loc>/4-connectordspostgresql/4-1-usingpgadmin4/</loc>
+    <loc>//localhost:61255/4-basicservicescreeneroperations/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-connectordspostgresql/4-1-usingpgadmin4/"
+                href="//localhost:61255/vi/4-basicservicescreeneroperations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-connectordspostgresql/4-1-usingpgadmin4/"
+                href="//localhost:61255/4-basicservicescreeneroperations/"
                 />
   </url><url>
-    <loc>/2-preparation/2-2-createec2sg/</loc>
+    <loc>//localhost:61255/5-advancedscanningoptions/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparation/2-2-createec2sg/"
+                href="//localhost:61255/vi/5-advancedscanningoptions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparation/2-2-createec2sg/"
+                href="//localhost:61255/5-advancedscanningoptions/"
                 />
   </url><url>
-    <loc>/3-startwithpostgresql/3-2-databaseschemas/</loc>
+    <loc>//localhost:61255/6-reportanalysisandinterpretation/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-startwithpostgresql/3-2-databaseschemas/"
+                href="//localhost:61255/vi/6-reportanalysisandinterpretation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-startwithpostgresql/3-2-databaseschemas/"
+                href="//localhost:61255/6-reportanalysisandinterpretation/"
                 />
   </url><url>
-    <loc>/2-preparation/</loc>
+    <loc>//localhost:61255/7-integrationwithawswell-architectedtool/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:61255/8-advanced-use-cases/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:61255/9-troubleshooting-andbestpractices/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:61255/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparation/"
+                href="//localhost:61255/vi/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparation/"
+                href="//localhost:61255/categories/"
                 />
   </url><url>
-    <loc>/4-connectordspostgresql/4-2-usingpsql/</loc>
+    <loc>//localhost:61255/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-connectordspostgresql/4-2-usingpsql/"
+                href="//localhost:61255/vi/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-connectordspostgresql/4-2-usingpsql/"
-                />
-  </url><url>
-    <loc>/2-preparation/2-3-createrdssg/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-preparation/2-3-createrdssg/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-preparation/2-3-createrdssg/"
-                />
-  </url><url>
-    <loc>/4-connectordspostgresql/4-3-queryingdata/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-connectordspostgresql/4-3-queryingdata/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-connectordspostgresql/4-3-queryingdata/"
-                />
-  </url><url>
-    <loc>/3-startwithpostgresql/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-startwithpostgresql/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-startwithpostgresql/"
-                />
-  </url><url>
-    <loc>/3-startwithpostgresql/3-3-tablesdatatypes/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-startwithpostgresql/3-3-tablesdatatypes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-startwithpostgresql/3-3-tablesdatatypes/"
-                />
-  </url><url>
-    <loc>/3-startwithpostgresql/3-4-basicdml/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-startwithpostgresql/3-4-basicdml/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-startwithpostgresql/3-4-basicdml/"
-                />
-  </url><url>
-    <loc>/4-connectordspostgresql/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-connectordspostgresql/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-connectordspostgresql/"
-                />
-  </url><url>
-    <loc>/2-preparation/2-4-createdbsubnetgroup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-preparation/2-4-createdbsubnetgroup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-preparation/2-4-createdbsubnetgroup/"
-                />
-  </url><url>
-    <loc>/2-preparation/2-5-createec2appsv/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-preparation/2-5-createec2appsv/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-preparation/2-5-createec2appsv/"
-                />
-  </url><url>
-    <loc>/5-helpfulresources/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/5-helpfulresources/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/5-helpfulresources/"
-                />
-  </url><url>
-    <loc>/3-startwithpostgresql/3-5-rolesusers/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-startwithpostgresql/3-5-rolesusers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-startwithpostgresql/3-5-rolesusers/"
-                />
-  </url><url>
-    <loc>/3-startwithpostgresql/3-6-catalodatadictonary/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-startwithpostgresql/3-6-catalodatadictonary/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-startwithpostgresql/3-6-catalodatadictonary/"
-                />
-  </url><url>
-    <loc>/6-cleanup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/6-cleanup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/6-cleanup/"
-                />
-  </url><url>
-    <loc>/2-preparation/2-6-createec2bastionhost/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-preparation/2-6-createec2bastionhost/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-preparation/2-6-createec2bastionhost/"
-                />
-  </url><url>
-    <loc>/2-preparation/2-7-createrdsdb/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-preparation/2-7-createrdsdb/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-preparation/2-7-createrdsdb/"
-                />
-  </url><url>
-    <loc>/3-startwithpostgresql/3-7-sessionparameters/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-startwithpostgresql/3-7-sessionparameters/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-startwithpostgresql/3-7-sessionparameters/"
-                />
-  </url><url>
-    <loc>/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/categories/"
-                />
-  </url><url>
-    <loc>/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/"
+                href="//localhost:61255/tags/"
                 />
   </url>
 </urlset>
