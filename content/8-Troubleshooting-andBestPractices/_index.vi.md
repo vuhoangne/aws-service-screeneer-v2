@@ -1,5 +1,5 @@
 ---
-title : "Troubleshooting and Best Practices"
+title : "Xử lý lỗi và các quy tắc vận hành chuẩn"
 date : "2024-01-01" 
 weight : 8 
 chapter : false
@@ -18,33 +18,33 @@ aws iam list-attached-user-policies --user-name YOUR_USERNAME
 ```
 
 **Issue: Scan Takes Too Long**
-- Use service-specific scanning: `--services s3,ec2`
-- Limit regions: `--regions us-east-1`
-- Use tag filtering to reduce scope
+- Sử dụng quét theo dịch vụ cụ thể: `--services s3,ec2`
+- Giới hạn region: `--regions us-east-1`
+- Sử dụng lọc tag để giảm phạm vi
 
 **Issue: Memory or Resource Errors**
-- Reduce worker count: `--workerCounts 2`
-- Scan fewer services at once
-- Use CloudShell in a region with fewer resources
+- Giảm số lượng worker: `--workerCounts 2`
+- Quét ít dịch vụ hơn cùng một lúc
+- Sử dụng CloudShell trong region có ít tài nguyên hơn
 
 #### 8.2. Best Practices
 
 **Scanning Strategy:**
-1. Start with critical services (IAM, S3, EC2)
-2. Gradually expand to all services
-3. Run regular scans (weekly/monthly)
-4. Focus on high-impact findings first
+1. Bắt đầu với các dịch vụ quan trọng (IAM, S3, EC2)
+2. Từ từ mở rộng đến tất cả dịch vụ
+3. Chạy quét định kỳ (hàng tuần/hàng tháng)
+4. Tập trung vào các phát hiện có tác động cao trước
 
 **Report Management:**
-1. Store reports securely (never expose publicly)
-2. Track remediation progress over time
-3. Share findings with relevant teams
-4. Document remediation actions taken
+1. Lưu trữ báo cáo một cách an toàn (không bao giờ để lộ công khai)
+2. Theo dõi tiến trình khắc phục theo thời gian
+3. Chia sẻ phát hiện với các team liên quan
+4. Ghi chép các hành động khắc phục đã thực hiện
 
 **Performance Optimization:**
-1. Use tag filtering for large environments
-2. Scan during off-peak hours
-3. Consider breaking large scans into smaller chunks
-4. Monitor CloudShell resource usage
+1. Sử dụng lọc tag cho môi trường lớn
+2. Quét trong giờ thấp điểm
+3. Cân nhắc chia các lần quét lớn thành các phần nhỏ hơn
+4. Giám sát việc sử dụng tài nguyên CloudShell
 
 ---

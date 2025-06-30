@@ -1,5 +1,5 @@
 ---
-title : "Prerequisites"
+title : "Điều kiện tiên quyết"
 date: "2024-01-01" 
 weight : 2
 chapter : false
@@ -8,7 +8,7 @@ pre : " <b> 2. </b> "
 
 
 #### 2.1. Verify IAM Permissions
-Before starting, ensure your IAM user has the required permissions.
+Trước khi bắt đầu, hãy đảm bảo IAM user của bạn có các quyền cần thiết.
 
 **Required Permissions:**
 - `ReadOnlyAccess` (AWS Managed Policy)
@@ -20,7 +20,7 @@ Before starting, ensure your IAM user has the required permissions.
 - `iam:SetSecurityTokenServicePreferences`
 
 #### 2.2. Create IAM Policy (If Needed)
-If you need to create a custom policy, use this JSON:
+Nếu bạn cần tạo custom policy, sử dụng JSON này:
 
 ```json
 {
@@ -39,14 +39,14 @@ If you need to create a custom policy, use this JSON:
 }
 ```
 #### 2.3. Launch AWS CloudShell
-- Log into your AWS Console
-- Navigate to CloudShell service (search for "CloudShell" in the services menu)
-- Launch CloudShell in your preferred region
-- Wait for the environment to initialize
+- Đăng nhập vào AWS Console của bạn
+- Điều hướng đến dịch vụ CloudShell (tìm kiếm "CloudShell" trong menu dịch vụ)
+- Khởi chạy CloudShell trong region ưa thích của bạn
+- Chờ môi trường khởi tạo
 {{%expand "AWS CloudShell" %}}![console](/images/3/1.png){{% /expand%}}
 
 #### 2.4. Install Service Screener v2
-Run the following commands in CloudShell:
+Chạy các lệnh sau trong CloudShell:
 ```bash
 # Navigate to temporary directory
 cd /tmp

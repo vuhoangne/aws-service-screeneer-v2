@@ -4,32 +4,31 @@ date : "2024-01-01"
 weight : 1 
 chapter : false
 ---
-# Let start with AWS Service Screener
+# Bắt đầu với AWS Service Screener
 
 #### AWS Service Screener v2
 
-AWS Service Screener is an assessment tool designed to help organizations evaluate their AWS environments
-against AWS best practices and identify optimization opportunities. 
+AWS Service Screener là một công cụ đánh giá được thiết kế để giúp các tổ chức đánh giá môi trường AWS của họ
+dựa trên các thực hành tốt nhất của AWS và xác định các cơ hội tối ưu hóa.
 ![intro](/images/1/1.png)
-#### What is AWS Service Screener?
+#### AWS Service Screener là gì?
 
-AWS Service Screener is a tool that analyzes your AWS infrastructure and provides recommendations for:
+AWS Service Screener là một công cụ phân tích cơ sở hạ tầng AWS của bạn và cung cấp các khuyến nghị cho:
 
-- **Cost optimization** - Identifying underutilized resources and cost-saving opportunities
+- **Tối ưu hóa chi phí** - Xác định các tài nguyên chưa được sử dụng hết và cơ hội tiết kiệm chi phí
 
-- **Performance optimization** - Recommending performance enhancements 
+- **Tối ưu hóa hiệu suất** - Khuyến nghị các cải tiến hiệu suất
 
-- **Operational excellence** - Suggesting operational best practices
+- **Xuất sắc trong vận hành** - Đề xuất các thực hành tốt nhất trong vận hành
 
-- **Reliability improvements** - Identifying single points of failure and resilience gaps 
+- **Cải thiện độ tin cậy** - Xác định các điểm lỗi đơn lẻ và khoảng trống về khả năng phục hồi
 
-### Content
-  1. [Introduce](1-Introduce/)
-  2. [Prerequisites](2-preparation/)
-  3. [Basic Service Screener Operations](4-BasicServiceScreenerOperations/)
-  4. [Advanced Scanning Options](5-AdvancedScanningOptions/)
-  5. [Report Analysis and Interpretation](6-ReportAnalysisandInterpretation/)
-  6. [Integration with AWS Well-Architected Tool](7-IntegrationwithAWSWell-ArchitectedTool/)
-  8. [Troubleshooting and Best Practices](8-Troubleshooting-andBestPractices/)
-  9. [Workshop Conclusion](9-Conclusion/)
-
+### Nội dung
+  1. [Giới thiệu](1-Introduce/)
+  2. [Yêu cầu tiên quyết](2-preparation/)
+  3. [Các thao tác cơ bản của Service Screener](4-BasicServiceScreenerOperations/)
+  4. [Tùy chọn quét nâng cao](5-AdvancedScanningOptions/)
+  5. [Phân tích và giải thích báo cáo](6-ReportAnalysisandInterpretation/)
+  6. [Tích hợp với AWS Well-Architected Tool](7-IntegrationwithAWSWell-ArchitectedTool/)
+  7. [Khắc phục sự cố và thực hành tốt nhất](8-Troubleshooting-andBestPractices/)
+  8. [Kết thúc Workshop](9-Conclusion/)

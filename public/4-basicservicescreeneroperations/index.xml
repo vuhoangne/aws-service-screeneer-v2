@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Basic Service Screener Operations on AWS RDS PostgreSQL</title>
-    <link>//localhost:61255/4-basicservicescreeneroperations/</link>
+    <link>//localhost:1313/4-basicservicescreeneroperations/</link>
     <description>Recent content in Basic Service Screener Operations on AWS RDS PostgreSQL</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="//localhost:61255/4-basicservicescreeneroperations/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/4-basicservicescreeneroperations/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
