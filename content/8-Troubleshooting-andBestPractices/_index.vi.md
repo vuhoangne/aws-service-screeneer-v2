@@ -14,7 +14,7 @@ aws sts get-caller-identity
 
 # Verify permissions
 aws iam get-user
-aws iam list-attached-user-policies --user-name YOUR_USERNAME
+aws iam list-attached-user-policies --user-name YOUR_USERNAME 
 ```
 
 **Issue: Scan Takes Too Long**

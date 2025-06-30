@@ -4,7 +4,7 @@ date : "2024-01-01"
 weight : 7 
 chapter : false
 pre : " <b> 7. </b> "
----
+--- 
 #### 7.1. Enable Well-Architected Integration
 {{%expand "Tạo một workload trong AWS Well-Architected Tool:" %}}![Create a workload in AWS Well-Architected Tool:](/images/7/1.png){{% /expand%}}
 ```bash

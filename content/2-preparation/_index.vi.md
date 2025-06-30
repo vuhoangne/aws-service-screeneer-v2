@@ -36,7 +36,7 @@ Nếu bạn cần tạo custom policy, sử dụng JSON này:
             "Resource": "*"
         }
     ]
-}
+} 
 ```
 #### 2.3. Launch AWS CloudShell
 - Đăng nhập vào AWS Console của bạn
@@ -58,7 +58,7 @@ source screener-env/bin/activate
 # Upgrade pip
 python3 -m pip install --upgrade pip
 
-# Clean up any existing installation
+# Clean up any existing installation 
 rm -rf service-screener-v2
 
 # Clone the repository

@@ -39,7 +39,7 @@ Báo cáo bao gồm:
 
 #### 5.3. Understanding Finding Categories
 
-1. {{%expand "Security Findings:" %}}![Security Findings:](/images/6/4.png){{% /expand%}}
+1. {{%expand "Security Findings:" %}}![Security Findings:](/images/6/4.png){{% /expand%}} 
    - Tài nguyên không được mã hóa
    - Chính sách quá lỏng lẻo
    - Thiếu cấu hình bảo mật

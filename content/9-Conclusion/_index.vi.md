@@ -4,7 +4,7 @@ date : "2024-01-01"
 weight : 9
 chapter : false
 pre : " <b> 9. </b> "
----
+--- 
 **##### Những điểm chính**
 - **Service Screener là một công cụ mạnh mẽ** để xác định các vi phạm thực hành tốt nhất của AWS
 - **Quét thường xuyên** giúp duy trì tư thế bảo mật và tối ưu hóa

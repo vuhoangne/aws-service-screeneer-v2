@@ -4,7 +4,7 @@ date: "2024-01-01"
 weight : 1 
 chapter : false
 pre : " <b> 1. </b> "
----
+--- 
 Workshop này sẽ hướng dẫn bạn sử dụng **AWS Service Screener v2**, một công cụ mã nguồn mở phân tích môi trường AWS của bạn và đưa ra các khuyến nghị dựa trên các thực hành tốt nhất của AWS Well-Architected Framework. Bạn sẽ học cách cài đặt, cấu hình và chạy công cụ để xác định các cơ hội tối ưu hóa trên các lĩnh vực Security, Reliability, Operational Excellence, Performance Efficiency, và Cost Optimization.
 
 #### Learning Objectives

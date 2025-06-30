@@ -11,7 +11,7 @@ pre : " <b> 3. </b> "
 # Replace 'us-east-1' with your current region
 screener --regions us-east-1
 ```
-
+ 
 **Điều gì xảy ra trong quá trình quét này:**
 - Service Screener phân tích tất cả các dịch vụ AWS được hỗ trợ trong region được chỉ định
 - Nó chạy các lệnh gọi API chỉ đọc để thu thập thông tin cấu hình
